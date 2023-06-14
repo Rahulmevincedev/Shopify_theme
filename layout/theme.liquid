@@ -245,10 +245,7 @@
   </head>
 
   <body class="gradient">
-    {% assign name = 'Rahul' %}
-    {% if name == 'Rahul' %}
-      your name is {{ name }}
-    {% endif %}
+    {{ collections.value }}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
