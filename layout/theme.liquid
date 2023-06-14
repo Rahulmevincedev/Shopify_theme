@@ -246,17 +246,28 @@
 
   <body class="gradient">
     {% comment %}
+      how to create array in liquid
       {% assign num = '1,2,3,5,6,7,8' | split: ',' -%}
       {% for get_single_num in num -%}
         {{ get_single_num }}
       {%- endfor %}
     {% endcomment %}
-    {% assign str = '' %}
-    {% if str != blank %}
-      true even if string is empty
-    {% else %}
-      empty string
-    {% endif %}
+    {% comment %}
+      {% assign str = '' %}
+        {% if str %}{% comment %} This will not work {% endcomment %}
+          true even if string is empty
+        {% else %}
+          empty string
+        {% endif %}
+    {% endcomment %}
+    {% comment %}
+      {% assign str = '' %}
+        {% if str != blank %}{% comment %} This will work {% endcomment %}
+          true even if string is empty
+        {% else %}
+          empty string
+        {% endif %}
+    {% endcomment %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -279,16 +290,6 @@
     </ul>
 
     <script>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -316,16 +317,6 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       };
-
-
-
-
-
-
-
-
-
-
     </script>
 
     {%- if settings.predictive_search_enabled -%}
