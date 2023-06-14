@@ -245,7 +245,7 @@
   </head>
 
   <body class="gradient">
-    {% assign num = '1,2,3,4' | split: ',' -%}
+    {% assign num = '1,2,3' | split: ',' -%}
     {% for get_single_num in num -%}
       {{ get_single_num }}
     {%- endfor %}
@@ -271,6 +271,7 @@
     </ul>
 
     <script>
+      
       
       
       
@@ -302,6 +303,7 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       };
+
 
 
 
