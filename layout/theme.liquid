@@ -246,7 +246,9 @@
 
   <body class="gradient">
     {% for get_coll in collections -%}
-      {{ get_coll.['CollectionDrop'] }}
+      {% for get_coll2 in get_coll -%}
+        {{ get_coll2 }}
+      {%- endfor %}
     {%- endfor %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
