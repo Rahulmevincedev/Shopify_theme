@@ -252,7 +252,7 @@
       {%- endfor %}
     {% endcomment %}
     {% assign str = '' %}
-    {% if str == true %}
+    {% if str != blank %}
       true even if string is empty
     {% else %}
       empty string
