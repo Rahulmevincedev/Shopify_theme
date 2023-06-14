@@ -245,15 +245,9 @@
   </head>
 
   <body class="gradient">
-    {% assign color = 'REd,Blue,Green' | split: ',' %}
-    {% case color[0] %}
-      {% when 'REd' %}
-        its REd
-      {% when 'Blue', 'Green' %}
-        its Green
-      {% else %}
-        unknown color
-    {% endcase %}
+    {% form 'actvate_customer_password' %}
+      <!-- This is Form -->
+    {% endform %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
