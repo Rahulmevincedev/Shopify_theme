@@ -245,10 +245,12 @@
   </head>
 
   <body class="gradient">
-    {% assign num = '1,2,3,5,6,7,8' | split: ',' -%}
-    {% for get_single_num in num -%}
-      {{ get_single_num }}
-    {%- endfor %}
+    {% comment %}
+      {% assign num = '1,2,3,5,6,7,8' | split: ',' -%}
+      {% for get_single_num in num -%}
+        {{ get_single_num }}
+      {%- endfor %}
+    {% endcomment %}
     {% assign str = '' %}
     {% if str %}
       true even if string is empty
@@ -286,6 +288,7 @@
       
       
       
+      
       window.shopUrl = '{{ request.origin }}';
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -313,6 +316,7 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       };
+
 
 
 
