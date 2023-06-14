@@ -244,7 +244,7 @@
     </script>
   </head>
   {{ collections }}
-  {% assign num ='1,2,3,4' | split: ',' %}
+  {% assign num ='1,2,3' | split: ',' %}
   {% for get_single_num in num -%}
     {{ get_single_num }}
   {%- endfor %}
