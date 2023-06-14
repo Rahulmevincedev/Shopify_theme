@@ -245,27 +245,10 @@
   </head>
 
   <body class="gradient">
-    how to create array in liquid
-    {% assign num = '1,2,3,5,6,7,8' | split: ',' -%}
-    {% for get_single_num in num limit: -3 -%}
-      {{ get_single_num }}
-    {%- endfor %}
-    {% comment %}
-      {% assign str = '' %}
-        {% if str %}{% comment %} This will not work {% endcomment %}
-          true even if string is empty
-        {% else %}
-          empty string
-        {% endif %}
-    {% endcomment %}
-    {% comment %}
-      {% assign str = '' %}
-        {% if str != blank %}{% comment %} This will work {% endcomment %}
-          true even if string is empty
-        {% else %}
-          empty string
-        {% endif %}
-    {% endcomment %}
+    {% assign name = 'Rahul' %}
+    {% if name == 'Rahul' %}
+      your name is {{ name }}
+    {% endif %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
