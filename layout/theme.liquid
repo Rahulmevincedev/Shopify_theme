@@ -252,6 +252,8 @@
     {% assign str = '' %}
     {% if str %}
       true even if string is empty
+    {% else %}
+      empty string
     {% endif %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
@@ -275,6 +277,7 @@
     </ul>
 
     <script>
+      
       
       
       
@@ -310,6 +313,7 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       };
+
 
 
 
