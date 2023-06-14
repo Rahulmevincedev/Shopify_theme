@@ -245,10 +245,15 @@
   </head>
 
   <body class="gradient">
-    {% assign var1 = true %}
-    {% unless var1 == false %}
-      Var1 is {{ var1 }}
-    {% endunless %}
+    {% assign color = 'REd,Blue,Green' | split: ',' %}
+    {% case color[0] %}
+      {% when 'REd' %}
+        its REd
+      {% when 'Blue', 'Green' %}
+        its Green
+      {% else %}
+        unknown color
+    {% endcase %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
