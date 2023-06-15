@@ -245,8 +245,8 @@
   </head>
 
   <body class="gradient">
-    {% paginate collection.products by 5 %}
-      {% for product in collection.products -%}
+    {% paginate collections.products by 5 %}
+      {% for product in collections.products -%}
         {{ product.title }}
       {%- endfor %}
 
