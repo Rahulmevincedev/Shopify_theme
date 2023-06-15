@@ -246,8 +246,9 @@
 
   <body class="gradient">
     {% assign color = 'Red,Green,Blue' | split: ',' %}
+    {% assign color = 'Red,Green,Blue,White' | split: ',' %}
     <table>
-      {% tablerow set_col in color -%}
+      {% tablerow set_col in color cols: 2 -%}
         {{ set_col -}}
       {% endtablerow -%}
     </table>
