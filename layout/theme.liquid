@@ -245,9 +245,12 @@
   </head>
 
   <body class="gradient">
-    {% form 'currency' %}
-      {{ form | currency_selector }}
-    {% endform %}
+    {% assign color = 'Red,Green,Blue' | split: ',' %}
+    <table>
+      {% tablerow set_col in color -%}
+        {{ set_col -}}
+      {% endtablerow -%}
+    </table>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
