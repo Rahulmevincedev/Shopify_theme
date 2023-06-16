@@ -24,6 +24,9 @@
 </div>
 <!-- Testing Liquid here -->
 Hello World
+{% for collection in collections -%}
+  {{ collection.handle }}
+{%- endfor %}
 
 {% schema %}
 {
