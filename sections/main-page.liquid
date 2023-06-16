@@ -34,7 +34,7 @@
     {%- endfor %}
     {{- paginate | default_pagination }}
   {%- endpaginate %}
-  {% break %}
+  {% break %}{% comment %}To get only one collection{% endcomment %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
