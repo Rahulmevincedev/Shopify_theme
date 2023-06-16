@@ -22,10 +22,12 @@
     {{ page.content }}
   </div>
 </div>
+
 <!-- Testing Liquid here -->
 {% for collection in collections -%}
   <div>{{ collection.handle }}</div>
 {%- endfor %}
+<!-- End Testing(Inside this block only) -->
 
 {% schema %}
 {
