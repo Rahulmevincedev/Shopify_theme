@@ -24,13 +24,10 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% assign e_color = 'Red,Blue,Green' | split: ',' %}
-{% capture get_e_color %}
-  {% if e_color[0] == 'Red' %}
-    {{ e_color[0] }}
-  {%  endif %}
-{% endcapture %}
-{{ get_e_color }}
+{% assign e_color = 'Red,,Blue,,,,Green' | split: ',' %}
+{% for get_e_color in e_color -%}
+  {{ get_e_color }}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
