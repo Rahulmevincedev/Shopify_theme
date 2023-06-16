@@ -24,17 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 -%}{% comment %}Set Limit to get only 1 collection{% endcomment %}
-  <div>
-    <h3>{{ collection.handle }}</h3>
-  </div>
-  {% paginate collection.products by 3, window_size: 1 -%}
-    {% for product in collection.products -%}
-      <div>{{ product.title }}</div>
-    {%- endfor %}
-    {{- paginate | default_pagination }}
-  {%- endpaginate %}
-{%- endfor %}
+{% assign str_temp = 'hello worLd' %}
+{{ str_temp | upcase }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
