@@ -26,6 +26,14 @@
 <!-- Testing Liquid here -->
 {% for collection in collections -%}
   <div>{{ collection.handle }}</div>
+  <div>
+    {% paginate collection.products by 3 -%}
+      {% for product in collection.products -%}
+        {{ product.title }}
+      {%- endfor %}
+      {{- paginate | default_pagination }}
+    {%- endpaginate %}
+  </div>
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
