@@ -24,7 +24,7 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections -%}
+{% for collection in collections limit: 1 -%}
   <div>
     <h3>{{ collection.handle }}</h3>
   </div>
@@ -34,7 +34,6 @@
     {%- endfor %}
     {{- paginate | default_pagination }}
   {%- endpaginate %}
-  {% break %}{% comment %}To get only one collection{% endcomment %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
