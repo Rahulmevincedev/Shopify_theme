@@ -28,7 +28,7 @@
   <div>
     <h3>{{ collection.handle }}</h3>
   </div>
-  {% paginate collection.products by 3, window_size: 2 -%}
+  {% paginate collection.products by 3, window_size: 1 -%}
     {% for product in collection.products -%}
       <div>{{ product.title }}</div>
     {%- endfor %}
