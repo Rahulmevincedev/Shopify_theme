@@ -25,7 +25,7 @@
 
 <!-- Testing Liquid here -->
 {% for collection in collections -%}
-  <div>{{ collection.handle }}</div>
+  <div><h3>{{ collection.handle }}</h3></div>
   <div>
     {% paginate collection.products by 3 -%}
       {% for product in collection.products -%}
