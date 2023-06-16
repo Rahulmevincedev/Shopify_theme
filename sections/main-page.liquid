@@ -24,10 +24,13 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% liquid
-  assign str_temp = 'hello wOrLd2'
-  echo str_temp | upcase
-%}
+{% assign e_color = 'Red,Blue,Green' | split: ',' %}
+{% capture get_e_color %}
+  {% if e_color[0] == 'Red' %}
+    {{ e_color[0] }}
+  {%  endif %}}  
+{% endcapture %}
+{{ get_e_color }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
