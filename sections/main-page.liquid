@@ -24,8 +24,10 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% assign str_temp = 'hello wOrLd' %}
-{{ str_temp | upcase }}
+{% liquid
+  assign str_temp = 'hello wOrLd'
+  str_temp | upcase
+%}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
