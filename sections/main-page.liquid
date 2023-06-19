@@ -24,13 +24,7 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 -%}
-  {% comment %}Get All Tags in Collection{% endcomment %}
-  <h3>{{ collection.title }}</h3>
-  {% for tag in collection.all_tags %}
-    <div>{{ tag | highlight_active_tag | link_to_tag: tag }}</div>
-  {% endfor %}
-{%- endfor %}
+{{ 'Clothing' | link_to_type }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
