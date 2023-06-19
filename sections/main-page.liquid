@@ -24,11 +24,9 @@
 </div>
 
 <!-- Testing Liquid here -->
-<h3>link_to_vendors</h3>
+<h3>collection_url</h3>
 {% for collection in collections limit: 1 %}
-  {% for vendor in collection.all_vendors %}
-    <div>{{ vendor | link_to_vendor }}</div>
-  {% endfor %}
+  {{ collection.url | sort_by: 'best-selling' }}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
