@@ -25,8 +25,8 @@
 
 <!-- Testing Liquid here -->
 {{ cart.items.id | join: ', ' }}
-{% for item in cart.items -%}
-  <div>Product Variant ID: {{ item.id }} Quantity: {{ cart | item_count_for_variant: item.id }}</div>
+{% for line_item in cart.items -%}
+  <div>Product Variant ID: {{ line_item.id }} Quantity: {{ cart | item_count_for_variant: line_item.id }}</div>
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
