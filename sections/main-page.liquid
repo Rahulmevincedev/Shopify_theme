@@ -27,7 +27,7 @@
 {% for collection in collections limit: 1 -%}
   {% comment %}Get All Tags in Collection{% endcomment %}
   {% for tag in collection.all_tags %}
-    {{ tag | highlight_active_tag | link_to_tag: tag }}
+    <div>{{ tag | highlight_active_tag | link_to_tag: tag }}</div>
   {% endfor %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
