@@ -24,7 +24,6 @@
 </div>
 
 <!-- Testing Liquid here -->
-<h3>Variant ID and Quantity of Products Present in Cart</h3>
 {% for collection in collections limit: 1 -%}
   {% comment %}Get All Tags in Collection{% endcomment %}
   {% for tag in collection.all_tags %}
