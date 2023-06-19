@@ -25,8 +25,8 @@
 
 <!-- Testing Liquid here -->
 {% for collection in collections limit: 1 %}
-  {% for type in collection.all_types %}
-    <div>{{ type | link_to_type }}</div>
+  {% for vendor in collection.all_vendors %}
+    <div>{{ vendor | link_to_vendor }}</div>
   {% endfor %}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
