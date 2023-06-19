@@ -25,11 +25,11 @@
 
 <!-- Testing Liquid here -->
 <h3>Variant ID and Quantity of Products Present in Cart</h3>
-{% for line_item in cart.items -%}
-  <div>
-    Product Variant ID: {{ line_item.id }} Title: {{ line_item.title }} Quantity:
-    {{ cart | item_count_for_variant: line_item.id }}
-  </div>
+{% for collection in collections limit: 1 -%}
+  {% comment %}Get All Tags in Collection{% endcomment %}
+  {% for tag in collection.all_tags %}
+    {{ tag | highlight_active_tag | linl_to_tag: tag }}
+  {% endfor %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
