@@ -24,9 +24,14 @@
 </div>
 
 <!-- Testing Liquid here -->
-<h3>sort_by/h3>
+<h3>sort_by</h3>
 {% for collection in collections limit: 1 %}
-  {{ collection.url | sort_by: 'best_selling' }}
+  {% paginate collection.products by 3 -%}
+    {% for product in collection.products -%}
+      <div>{{ product.title }}</div>
+    {%- endfor %}
+    {{- paginate | default_pagination }}
+  {%- endpaginate %}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
