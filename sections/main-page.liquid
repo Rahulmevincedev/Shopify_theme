@@ -24,7 +24,7 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ cart.items.id | join: ', ' }}
+Variant ID of Products Present in Cart
 {% for line_item in cart.items -%}
   <div>Product Variant ID: {{ line_item.id }} Quantity: {{ cart | item_count_for_variant: line_item.id }}</div>
 {%- endfor %}
