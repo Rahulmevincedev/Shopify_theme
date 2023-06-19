@@ -27,6 +27,7 @@
 {{ cart.items.id | join: ', ' }}
 {% for item in cart.items -%}
   {{ item.id }}
+  {{ cart | item_count_for_variant: item.id }}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
