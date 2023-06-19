@@ -25,14 +25,7 @@
 
 <!-- Testing Liquid here -->
 <h3>with_in</h3>
-{% for collection in collections limit: 1 %}
-  {% paginate collection.products by 3 -%}
-    {% for product in collection.products -%}
-      <div>{{ product.url | within: collection }}</div>
-    {%- endfor %}
-    {{- paginate | default_pagination }}
-  {%- endpaginate %}
-{% endfor %}
+{{ 'Login' | customer_login_link }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
