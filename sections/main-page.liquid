@@ -24,7 +24,11 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ 'clothing' | link_to_type }}
+{% for collection in collections limit: 1 %}
+  {% for type in collection.all_types %}
+    {{ type | link_to_type }}
+  {% endfor %}
+{% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
