@@ -25,6 +25,9 @@
 
 <!-- Testing Liquid here -->
 {{ cart.items.id | join: ', ' }}
+{% for item in cart.items %}
+  {{ item.id }}
+{% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
