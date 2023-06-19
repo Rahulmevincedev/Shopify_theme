@@ -28,7 +28,7 @@
 {% for collection in collections limit: 1 %}
   {% paginate collection.products by 3 -%}
     {% for product in collection.products -%}
-      <div>{{ product.title }}</div>
+      <div>{{ product.url | within: collection }}</div>
     {%- endfor %}
     {{- paginate | default_pagination }}
   {%- endpaginate %}
