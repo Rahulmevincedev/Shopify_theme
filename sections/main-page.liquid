@@ -31,7 +31,9 @@
   </div>
   {% paginate collection.products by 3 -%}
     {% for product in collection.products -%}
-      <div>{{ product.title }}</div>
+      <div>
+        <h4>{{ product.title }}</h4>
+      </div>
       {% for variant in product.variants %}
         <p>Weight: {{ variant.weight | weight_with_unit }}</p>
       {% endfor %}
