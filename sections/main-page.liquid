@@ -25,6 +25,12 @@
 
 <!-- Testing Liquid here -->
 {% for collection in collections limit: 1 %}
+  {% paginate collection.products by 3 %}
+    {% for product in collection.products %}
+      {{ product.title }}
+    {% endfor %}
+    {{ paginate | default_pagination }}
+  {% endpaginate %}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
