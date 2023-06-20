@@ -31,7 +31,7 @@
   </div>
   {% paginate collection.products by 3 -%}
     {% for product in collection.products -%}
-      <div>{{ product.weight }}</div>
+      <div>{{ product.variants.weight }}</div>
     {%- endfor %}
     {{- paginate | default_pagination }}
   {%- endpaginate %}
