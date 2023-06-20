@@ -24,7 +24,7 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ 'collection-1' | placeholder_svg_tag }}
+{{ 'cart.js' | asset_url | preload_tag: as: 'script' }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
