@@ -24,23 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 -%}
-  {% comment %}Set Limit to get only 1 collection{% endcomment %}
-  <div>
-    <h3>{{ collection.handle }}</h3>
-  </div>
-  {% paginate collection.products by 3 -%}
-    {% for product in collection.products -%}
-      <div>
-        <h4>{{ product.title }}</h4>
-      </div>
-      {% for variant in product.variants %}
-        <p>Weight: {{ variant.weight | weight_with_unit }}</p>
-      {% endfor %}
-    {%- endfor %}
-    {{- paginate | default_pagination }}
-  {%- endpaginate %}
-{%- endfor %}
+{% assign a = 'Happy BirthDay Rahul Sir. I Want to Chicken Fired Rice :)' %}
+{{ a | highlight: 'Rahul' }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
