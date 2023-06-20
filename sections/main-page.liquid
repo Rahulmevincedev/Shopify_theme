@@ -24,14 +24,18 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 %}
-  {% paginate collection.products by 3 %}
-    {% for product in collection.products %}
-      {{ product.title }}
-    {% endfor %}
-    {{ paginate | default_pagination }}
-  {% endpaginate %}
-{% endfor %}
+{% for collection in collections limit: 1 -%}
+  {% comment %}Set Limit to get only 1 collection{% endcomment %}
+  <div>
+    <h3>{{ collection.handle }}</h3>
+  </div>
+  {% paginate collection.products by 3 -%}
+    {% for product in collection.products -%}
+      <div>{{ product.title }}</div>
+    {%- endfor %}
+    {{- paginate | default_pagination }}
+  {%- endpaginate %}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
