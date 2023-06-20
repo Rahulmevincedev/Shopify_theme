@@ -24,7 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ collections | json }}
+{% for collection in collections limit: 1 %}
+{% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
