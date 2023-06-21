@@ -26,7 +26,6 @@
 <!-- Testing Liquid here -->
 {% for collection in collections limit: 1 %}
   {% for product in collection.products limit: 1 -%}
-    <!-- With a height -->
     {{
       product
       | image_url: width: 400
