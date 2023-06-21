@@ -29,12 +29,8 @@
   <div>
     <h3>{{ collection.handle }}</h3>
   </div>
-  {% paginate collection.products by 3 -%}
-    {% for product in collection.products -%}
-      <div>{{ product.title }}</div>
-    {%- endfor %}
-    {{- paginate | default_pagination }}
-  {%- endpaginate %}
+  {% assign product = collection.all_products[8296180744469] %}
+  {{ product.title }}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
