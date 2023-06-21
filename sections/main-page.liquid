@@ -24,11 +24,26 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 %}
-  {% for product in collection.products limit: 1 -%}
-    {{ product | image_url: width: 400, height: 400, pad_color: '0f0' | image_tag }}
+{% for collection in collections limit: 1 -%}
+  {% comment %}Set Limit to get only 1 collection{% endcomment %}
+  <div>
+    <h3>{{ collection.handle }}</h3>
+  </div>
+  {% for product in collection.products -%}
+    {% if product.id == 8296180744469 -%}
+      <div>Title: {{ product.title }}</div>
+      <div>ID: {{ product.id }}</div>
+      <div>Media types: {{ product.media.media_type }}</div>
+      {% for g_media in product.media -%}
+        {{ g_media.media_type }}
+        {% if g_media.media_type == 'video' %}
+          {{ g_media | media_tag }}
+        {% endif %}
+      {%- endfor %}
+      {% break %}
+    {%- endif %}
   {%- endfor %}
-{% endfor %}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
