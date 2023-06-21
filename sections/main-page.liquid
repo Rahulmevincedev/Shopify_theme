@@ -33,7 +33,7 @@
     {% if product.id == 8296180744469 -%}
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
-      <div>Media type: {{ product.media }}</div>
+      <div>Media type: {{ product.media | join: ', ' }}</div>
       {% break %}
     {%- endif %}
   {%- endfor %}
