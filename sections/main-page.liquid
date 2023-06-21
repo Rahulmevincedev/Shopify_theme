@@ -39,7 +39,7 @@
           {% when 'video' %}
             {{ g_media | media_tag: image_size: '400x' }}
           {% when 'model' %}
-            {{ g_media | model_viewer_tag: image_size: '800x', setSize: '(width: 800, height: 800)' }}
+            {{ g_media | model_viewer_tag: image_size: '800x', alt: '(width: 800, height: 800)' }}
         {% endcase %}
       {%- endfor %}
       {% break %}
