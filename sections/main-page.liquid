@@ -37,10 +37,10 @@
       {% for g_media in product.media -%}
         {% case g_media.media_type %}
           {% when 'video' %}
-
+            {{ g_media | media_tag: image_size: '400x' }}
+          {% when 'model' %}
+            {{ g_media | model_viewer_tag }}
         {% endcase %}
-        {{ g_media.media_type }}
-        {{ g_media | media_tag: image_size: '400x' }}
       {%- endfor %}
       {% break %}
     {%- endif %}
