@@ -34,9 +34,9 @@
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
       <div>Media types: {{ product.media.media_type }}</div>
-      {% for g_media in product.media %}
+      {% for g_media in product.media -%}
         {{ g_media.media_type }}
-      {% endfor %}
+      {%- endfor %}
       {% break %}
     {%- endif %}
   {%- endfor %}
