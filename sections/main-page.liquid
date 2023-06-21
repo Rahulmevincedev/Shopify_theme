@@ -31,8 +31,10 @@
   </div>
   {% paginate collection.products by 3 -%}
     {% for product in collection.products -%}
-      <div>{{ product.title }}</div>
-      <div>{{ product.id }}</div>
+      {% if product.id == '8296180744469' -%}
+        <div>{{ product.title }}</div>
+        <div>{{ product.id }}</div>
+      {%- endif %}
     {%- endfor %}
     {{- paginate | default_pagination }}
   {%- endpaginate %}
