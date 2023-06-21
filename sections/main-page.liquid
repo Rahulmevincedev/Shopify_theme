@@ -37,6 +37,7 @@
       {% for g_media in product.media -%}
         {{ g_media.media_type }}
         {% if g_media.media_type == 'video' %}
+          {{ g_media | external_video_url }}
         {% endif %}
       {%- endfor %}
       {% break %}
