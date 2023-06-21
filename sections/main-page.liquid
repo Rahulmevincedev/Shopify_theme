@@ -27,7 +27,7 @@
 {% for collection in collections limit: 1 %}
   {% for product in collection.products limit: 1 -%}
     <!-- With a height -->
-    {{ product | image_url: width: 400 | image_tag: height: 600 }}
+    {{ product | image_url: width: 400 | image_tag: height: 500 }}
 
     <!-- With the height set to nil. Filter image_tag is controling width -->
     {{ product | image_url: width: 400 | image_tag: height: null }}
