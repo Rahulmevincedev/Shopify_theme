@@ -26,7 +26,11 @@
 <!-- Testing Liquid here -->
 {% for collection in collections limit: 1 %}
   {% for product in collection.products limit: 1 -%}
-    {{ product | image_url: width: 200 | image_tag }}
+    <!-- With a width -->
+    {{ product | image_url: width: 400 | image_tag: width: 300 }}
+
+    <!-- With the width set to nil -->
+    {{ product | image_url: width: 400 | image_tag: width: null }}
   {%- endfor %}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
