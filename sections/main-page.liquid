@@ -27,10 +27,11 @@
 {% for collection in collections limit: 1 %}
   {% for product in collection.products limit: 1 -%}
     <!-- With a height -->
-    {{ product | image_url: width: 400 | image_tag: height: 500 }}
-
-    <!-- With the height set to nil. Filter image_tag is controling width -->
-    {{ product | image_url: width: 400 | image_tag: height: null }}
+    {{
+      product
+      | image_url: width: 400
+      | image_tag: sizes: '(min-width:1600px) 960px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)'
+    }}
   {%- endfor %}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
