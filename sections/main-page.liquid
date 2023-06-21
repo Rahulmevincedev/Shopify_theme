@@ -26,7 +26,7 @@
 <!-- Testing Liquid here -->
 {% for collection in collections limit: 1 %}
   {% for product in collection.products limit: 1 -%}
-    {{ product | image_url: width: 400 | image_tag: srcset: null }}
+    {{ product | image_url: width: 400 | image_tag: alt: 'Product Image NOt Found Sorry :(' }}
   {%- endfor %}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
