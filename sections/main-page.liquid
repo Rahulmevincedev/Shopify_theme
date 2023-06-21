@@ -24,18 +24,16 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 -%}
-  {% comment %}Set Limit to get only 1 collection{% endcomment %}
-  <div>
-    <h3>{{ collection.handle }}</h3>
-  </div>
-  {% assign filtered_product_array = collection.products | where: 'id', 8296180744469 %}
-  {% if filtered_product_array.size > 0 -%}
-    {% for product in filtered_product_array %}
-      Tile:{{ product.title }} ID: {{ product.id }}
-    {% endfor %}
-  {%- endif %}
-{%- endfor %}
+{% for media in product.media %}
+  {% if media.media_type == 'external_video' %}
+    {% if media.host == 'youtube' %}
+      {{ media | external_video_url: color: 'white' | external_video_tag }}
+    {% elsif media.host == 'vimeo' %}
+      {{ media | external_video_url: loop: '1', muted: '1' | external_video_tag }}
+    {% endif %}
+  {% endif %}
+{% endfor -%}
+s
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
