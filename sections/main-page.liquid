@@ -36,6 +36,8 @@
       <div>Media types: {{ product.media.media_type }}</div>
       {% for g_media in product.media -%}
         {{ g_media.media_type }}
+        {% if g_media.media_type == 'video' %}
+        {% endif %}
       {%- endfor %}
       {% break %}
     {%- endif %}
