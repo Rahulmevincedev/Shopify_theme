@@ -28,7 +28,11 @@
   {% for product in collection.products limit: 1 -%}
     {{ product | image_url: width: 400, height: 400, crop: 'bottom' | image_tag }}
 
-    {{ product | image_url: crop: 'region', crop_left: 32, crop_top: 32, crop_width: 512, crop_height: 512 }}
+    {{
+      product
+      | image_url: crop: 'region', crop_left: 32, crop_top: 32, crop_width: 512, crop_height: 512
+      | image_tag
+    }}
 
     {{
       product
@@ -40,6 +44,7 @@
         crop_top: 32,
         crop_width: 512,
         crop_height: 512
+      | image_tag
     }}
   {%- endfor %}
 {% endfor %}
