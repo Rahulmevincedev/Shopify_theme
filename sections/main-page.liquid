@@ -30,6 +30,9 @@
     <h3>{{ collection.handle }}</h3>
   </div>
   {% assign filtered_product_array = collection.products | where: 'id', '8296180744469' %}
+  {% if filtered_product_array.size > 0 -%}
+    <div>Tile:{{ filtered_product_array.product.title }} ID: {{  }}</div>
+  {%- endif %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
