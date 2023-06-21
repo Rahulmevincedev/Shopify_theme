@@ -36,9 +36,7 @@
       <div>Media types: {{ product.media.media_type }}</div>
       {% for g_media in product.media -%}
         {{ g_media.media_type }}
-        {% if g_media.media_type == 'video' -%}
-          {{ g_media | media_tag: image_size: '400x' }}
-        {%- endif %}
+        {{ g_media | media_tag: image_size: '400x' }}
       {%- endfor %}
       {% break %}
     {%- endif %}
