@@ -24,14 +24,25 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ product | image_url: width: 400, height: 400, crop: 'bottom' }}
+{% for collection in collections limit: 1 %}
+  {% for product in collection.products limit: 1 -%}
+    {{ product | image_url: width: 400, height: 400, crop: 'bottom' }}
 
-{{ product | image_url: crop: 'region', crop_left: 32, crop_top: 32, crop_width: 512, crop_height: 512 }}
+    {{ product | image_url: crop: 'region', crop_left: 32, crop_top: 32, crop_width: 512, crop_height: 512 }}
 
-{{
-  product
-  | image_url: crop: 'region', width: 100, height: 100, crop_left: 32, crop_top: 32, crop_width: 512, crop_height: 512
-}}
+    {{
+      product
+      | image_url:
+        crop: 'region',
+        width: 100,
+        height: 100,
+        crop_left: 32,
+        crop_top: 32,
+        crop_width: 512,
+        crop_height: 512
+    }}
+  {%- endfor %}
+{% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
