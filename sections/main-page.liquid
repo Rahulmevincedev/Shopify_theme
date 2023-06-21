@@ -36,6 +36,8 @@
       <div>Media types: {{ product.media.media_type }}</div>
       {% for g_media in product.media -%}
         {% case g_media.media_type %}
+          {% when 'video' %}
+
         {% endcase %}
         {{ g_media.media_type }}
         {{ g_media | media_tag: image_size: '400x' }}
