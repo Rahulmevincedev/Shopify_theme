@@ -31,12 +31,9 @@
   </div>
   {% for product in collection.products -%}
     {% if product.id == 8296180744469 -%}
-      Title:
-      <div>{{ product.title }}</div>
-      ID:
-      <div>{{ product.id }}</div>
-      Media type:
-      <div>{{ product.media.media_type }}</div>
+      <div>Title: {{ product.title }}</div>
+      <div>ID: {{ product.id }}</div>
+      <div>Media type: {{ product.media.media_type }}</div>
       {% break %}
     {%- endif %}
   {%- endfor %}
