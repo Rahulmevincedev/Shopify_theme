@@ -25,8 +25,9 @@
 
 <!-- Testing Liquid here -->
 {% for collection in collections limit: 1 %}
-  {% for product in collection.products limit: 1 %}
-  {% endfor %}
+  {% for product in collection.products limit: 1 -%}
+    {{ product | image_url: width: 200 | image_tag }}
+  {%- endfor %}
 {% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
