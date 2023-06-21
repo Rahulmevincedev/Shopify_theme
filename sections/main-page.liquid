@@ -29,9 +29,7 @@
   <div>
     <h3>{{ collection.handle }}</h3>
   </div>
-  {% for product in collection.products -%}
-    {% break %}
-  {%- endfor %}
+  {% assign filtered_product_array = collection.products | where: 'id', '8296180744469' %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
