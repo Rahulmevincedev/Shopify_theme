@@ -31,7 +31,9 @@
   </div>
   {% assign filtered_product_array = collection.products | where: 'id', 8296180744469 %}
   {% if filtered_product_array.size > 0 -%}
-    <div>{{ filtered_product_array | join: ' ' }}</div>
+    {% for product in filtered_product_array %}
+      Tile:{{ product.title }} ID: {{ product.id }}
+    {% endfor %}
   {%- endif %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
