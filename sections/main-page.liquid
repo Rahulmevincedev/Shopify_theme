@@ -29,16 +29,13 @@
   <div>
     <h3>{{ collection.handle }}</h3>
   </div>
-  {% paginate collection.products by 3 -%}
-    {% for product in collection.products -%}
-      {% if product.id == '8296180744469' -%}
-        <div>{{ product.title }}</div>
-        <div>{{ product.id }}</div>
-        {% break %}
-      {%- endif %}
-    {%- endfor %}
-    {{- paginate | default_pagination }}
-  {%- endpaginate %}
+  {% for product in collection.products -%}
+    {% if product.id == '8296180744469' -%}
+      <div>{{ product.title }}</div>
+      <div>{{ product.id }}</div>
+      {% break %}
+    {%- endif %}
+  {%- endfor %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
