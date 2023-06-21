@@ -30,18 +30,7 @@
     <h3>{{ collection.handle }}</h3>
   </div>
   {% for product in collection.products -%}
-    {% if product.id == 8296180744469 -%}
-      <div>Title: {{ product.title }}</div>
-      <div>ID: {{ product.id }}</div>
-      <div>Media types: {{ product.media.media_type }}</div>
-      {% for g_media in product.media -%}
-        {{ g_media.media_type }}
-        {% if g_media.media_type == 'video' %}
-          {{ g_media | external_video_url }}
-        {% endif %}
-      {%- endfor %}
-      {% break %}
-    {%- endif %}
+    {% break %}
   {%- endfor %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
