@@ -27,7 +27,7 @@
 {% for collection in collections limit: 1 -%}
   {% for tag in collection.tags -%}
     <div>
-      <h4>{{ tag | link_to_add_tag: tag }}</h4>
+      <h4>{{ tag | link_to_tag: tag }}</h4>
     </div>
   {%- endfor %}
 {%- endfor %}
