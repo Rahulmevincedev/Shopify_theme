@@ -24,12 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% assign product = all_products.chukka %}
-{{ request.origin -}}
-<br>
-{{ product.url -}}
-<br>
-{{ product.url | prepend: request.origin }}
+{%- assign secret_potion = 'Hello world' | sha1 -%}
+My secret potion: {{ secret_potion }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
