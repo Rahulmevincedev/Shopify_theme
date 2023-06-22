@@ -24,8 +24,7 @@
 </div>
 
 <!-- Testing Liquid here -->
-{%- assign text_string = '                                     Hello world       ' -%}
-"{{ text_string }}" "{{ text_string | lstrip }}"
+{{ all_products.chukka.description | newline_to_br }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
