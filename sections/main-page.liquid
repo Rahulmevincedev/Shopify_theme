@@ -28,7 +28,7 @@
   {% for tag in collection.all_tags -%}
     <div>
       <h4>{{ tag }}</h4>
-      <h4>{{ tag | link_to_add_tag }}</h4>
+      <h4>{{ tag | link_to_add_tag: tag }}</h4>
     </div>
   {%- endfor %}
 {%- endfor %}
