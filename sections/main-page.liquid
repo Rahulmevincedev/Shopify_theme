@@ -24,21 +24,9 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 -%}
-  {% comment %}Set Limit to get only 1 collection{% endcomment %}
-  <div>
-    <h3>{{ collection.handle }}</h3>
-  </div>
-  {% for product in collection.products -%}
-    {% if product.id == 8296180744469 -%}
-      <div>Title: {{ product.title }}</div>
-      <div>ID: {{ product.id }}</div>
-      {% form 'cart', product %}
-        {{ form | payment_terms }}
-      {% endform %}
-    {%- endif %}
-  {%- endfor %}
-{%- endfor %}
+{% for type in shop.enabled_payment_types %}
+  <img src="{{ type | payment_type_img_url }}">
+{% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
