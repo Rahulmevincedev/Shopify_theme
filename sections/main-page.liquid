@@ -34,7 +34,7 @@
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
       <div>Prices: {{ product.price }}</div>
-      <div>Prices: {{ product.price | money_without_currency }}</div>
+      <div>Prices: {{ product.price | money_without_trailing_zeros }}</div>
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
