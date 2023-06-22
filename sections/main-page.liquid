@@ -24,11 +24,11 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for collection in collections limit: 1 %}
-  {% for tag in collection.all_tags %}
+{% for collection in collections limit: 1 -%}
+  {% for tag in collection.all_tags -%}
     {{ tag }}
-  {% endfor %}
-{% endfor %}
+  {%- endfor %}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
