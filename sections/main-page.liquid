@@ -24,8 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ all_products.chukka.description }}
-{{ all_products.chukka.description | newline_to_br }}
+{{ 1 | pluralize: 'item', 'items' }}
+{{ 3 | pluralize: 'item', 'items' }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
