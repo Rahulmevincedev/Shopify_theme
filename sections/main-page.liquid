@@ -24,8 +24,12 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ 1 | pluralize: 'item', 'items' }}
-{{ 3 | pluralize: 'item', 'items' }}
+{% assign product = all_products.chukka %}
+{{ request.origin -}}
+<br>
+{{ product.url -}}
+<br>
+{{ product.url | prepend: request.origin }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
