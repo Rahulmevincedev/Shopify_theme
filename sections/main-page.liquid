@@ -25,6 +25,8 @@
 
 <!-- Testing Liquid here -->
 {% assign product = all_products.chukka %}
+{{ request.origin }}
+{{ product.url }}
 {{ request.origin | append: product.url }}
 <!-- End Testing(Inside this block only boiee) -->
 {% schema %}
