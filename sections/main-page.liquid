@@ -24,7 +24,9 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ 'variable-name' | camelize }}
+{%- assign secret_potion = 'Polyjuice' | hmac_sha1: 'Polina' -%}
+
+My secret potion: {{ secret_potion }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
