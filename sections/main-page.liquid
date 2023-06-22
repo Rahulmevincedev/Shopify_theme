@@ -33,56 +33,6 @@
     {% if product.id == 8296180744469 -%}
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
-      <!-- boolean -->
-      {{ product.metafields.information.seasonal | metafield_tag }}
-
-      <!-- collection_reference -->
-      {{ product.metafields.information.related_collection | metafield_tag }}
-
-      <!-- color -->
-      {{ product.metafields.details.potion_color | metafield_tag }}
-
-      <!-- date -->
-      {{ product.metafields.information.expiry | metafield_tag }}
-
-      <!-- date_time -->
-      {{ product.metafields.information.brew_date | metafield_tag }}
-
-      <!-- json -->
-      {{ product.metafields.information.burn_temperature | metafield_tag }}
-
-      <!-- money -->
-      {{ product.metafields.details.price_per_ml | metafield_tag }}
-
-      <!-- multi_line_text_field -->
-      {{ product.metafields.information.shipping | metafield_tag }}
-
-      <!-- number_decimal -->
-      {{ product.metafields.information.salinity | metafield_tag }}
-
-      <!-- number_integer -->
-      {{ product.metafields.information.doses_per_day | metafield_tag }}
-
-      <!-- page_reference -->
-      {{ product.metafields.information.dosage | metafield_tag }}
-
-      <!-- product_reference -->
-      {{ product.metafields.information.related_product | metafield_tag }}
-
-      <!-- rating -->
-      {{ product.metafields.details.rating | metafield_tag }}
-
-      <!-- single_line_text_field -->
-      {{ product.metafields.information.directions | metafield_tag }}
-
-      <!-- url -->
-      {{ product.metafields.information.health | metafield_tag }}
-
-      <!-- variant_reference -->
-      {{ product.metafields.information.health | metafield_tag }}
-
-      <!-- rich_text_field -->
-      {{ product.metafields.information.rich_description | metafield_tag }}
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
