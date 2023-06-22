@@ -24,8 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{%- assign secret_potion = 'Hello world' | hmac_sha256: 'chi' -%}
-My secret potion: {{ secret_potion }}
+{%- assign text_string = '  Hello world  ' -%}
+{{ text_string | lstrip }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
