@@ -26,8 +26,6 @@
 <!-- Testing Liquid here -->
 {% assign product = all_products.chukka %}
 {{ request.origin | append: product.url }}
-{% assign g_link = request.origin | append: product.url %}
-{{ 'Chukka' | link_to: g_link }}
 <!-- End Testing(Inside this block only boiee) -->
 {% schema %}
 {
