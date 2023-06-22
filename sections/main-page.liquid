@@ -37,7 +37,7 @@
       {% for g_media in product.media -%}
         {% case g_media.media_type %}
           {% when 'video' %}
-            {{ g_media | media_tag: image_size: '400x' }}
+            {% comment %}{{ g_media | media_tag: image_size: '400x' }}{% endcomment %}
           {% when 'model' %}
             {{ g_media | model_viewer_tag: image_size: '800x' }}
         {% endcase %}
