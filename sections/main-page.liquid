@@ -34,7 +34,7 @@
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
       {% form 'product', product %}
-        {{ form | payment_button }}
+        {{ form | payment_terms }}
       {% endform %}
     {%- endif %}
   {%- endfor %}
