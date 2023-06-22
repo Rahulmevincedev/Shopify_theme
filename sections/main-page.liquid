@@ -24,7 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ all_products.chukka.title }}
+{% assign product = all_products.chukka %}
+{{ request.origin | append: product.handle }}
 <!-- End Testing(Inside this block only boiee) -->
 {% schema %}
 {
