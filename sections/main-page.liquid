@@ -33,8 +33,9 @@
     {% if product.id == 8296180744469 -%}
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
-      <div>Prices: {{ product.price }}</div>
-      <div>Prices: {{ product.price | money_without_trailing_zeros }}</div>
+      {% form 'product', product %}
+        {{ form | payment_button }}
+      {% endform %}
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
