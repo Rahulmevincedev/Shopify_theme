@@ -24,9 +24,8 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for type in shop.enabled_payment_types %}
-  {{ type | payment_type_svg_tag }}
-{% endfor %}
+{% assign product = all_products[1] %}
+{{ product.title }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
