@@ -24,9 +24,9 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ 'Tiantian' | base64_encode -}}
+{{ 'Tiantian' | base64_url_safe_encode -}}
 <br>
-{{ 'VGlhbnRpYW4=' | base64_decode }}
+{{ 'VGlhbnRpYW4=' | base64_url_safe_decode }}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
