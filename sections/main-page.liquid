@@ -36,7 +36,7 @@
       <h4>Metafields</h4>
       <b>Type</b>: {{ product.metafields.my_fields.conditions.type | metafield_tag }}
       <b>Value</b>: {{ product.metafields.my_fields.conditions.value | metafield_tag }}
-      {{ product.metafields.my_fields.conditions | metafield_tag }}
+      <div>{{ product.metafields.my_fields.conditions | metafield_tag }}</div>
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
