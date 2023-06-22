@@ -38,7 +38,7 @@
         {% case g_media.media_type %}
           {% when 'video' %}
             {% comment %}{{ g_media | media_tag: image_size: '400x' }}{% endcomment %}
-            {{ g_media | video_tag: width: '800x', autoplay: false, controls: true }}
+            {{ g_media | video_tag: width: '800x', autoplay: false, controls: true, loop: true }}
           {% when 'model' %}
             {{ g_media | model_viewer_tag: image_size: '800x' }}
         {% endcase %}
