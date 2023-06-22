@@ -33,8 +33,7 @@
     {% if product.id == 8296180744469 -%}
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
-      <h4>Metafields</h4>
-      <div>{{ product.metafields.my_fields.conditions | metafield_text }}</div>
+      <div>Prices: {{ product.price }}</div>
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
