@@ -24,10 +24,13 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% assign a = 'Red,Blue,Green,Yellow,Violet' | split: ',' %}
-{% for i in a -%}
-  {{ forloop.rindex0 }}
-{%- endfor %}
+{% assign a = 'Red,Blue,Green,Yellow,Violet,GOld' | split: ',' %}
+{% paginate a by 2 %}
+  {% for i in a -%}
+    <div>{{ i }}</div>
+  {%- endfor %}
+  {{ paginate | default_pagination }}
+{% endpaginate %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
