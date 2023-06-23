@@ -24,8 +24,9 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% for address in customer.addresses %}
-{% endfor %}
+{% for address in customer.addresses -%}
+  {{ address.address1 }}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
