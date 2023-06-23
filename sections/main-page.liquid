@@ -24,7 +24,12 @@
 </div>
 
 <!-- Testing Liquid here -->
-
+{% for i in (1..10) -%}
+  {% if i == 6 -%}
+    {% continue %}
+  {%- endif %}
+  {{ i }}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
