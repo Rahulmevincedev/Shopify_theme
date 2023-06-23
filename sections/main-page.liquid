@@ -25,8 +25,8 @@
 
 <!-- Testing Liquid here -->
 {% assign a = 'Red,Blue,Green,Yellow,Violet' | split: ',' %}
-{% for i in a reversed -%}
-  {{ forloop.index }}
+{% for i in a -%}
+  {{ forloop.index0 }}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
