@@ -24,18 +24,9 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% comment %}1st Loop{% endcomment %}
-{% for i in (1..3) -%}
-  {% comment %}2nd Loop{% endcomment %}
-  {% for j in (4..6) -%}
-    {% comment %}3rd Loop{% endcomment %}
-    {%- for k in (7..9) -%}
-      <div>
-        {{ forloop.parentloop.parentloop.index }}-
-        {{- forloop.parentloop.index }}-{{ forloop.index }}
-      </div>
-    {%- endfor -%}
-  {%- endfor %}
+{% assign a = '1,2,3,4,5' | split: ',' %}
+{% for i in a reversed -%}
+  {{ forloop.rindex }}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
