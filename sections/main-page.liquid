@@ -24,10 +24,27 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% assign a = 'Red,Blue,Green,Yellow,Violet,Gold' | split: ',' %}
-{% tablerow i in a cols: 2 %}
-  <div>{{ i }}</div>
-{% endtablerow %}
+{% for collection in collections limit: 1 -%}
+  {% comment %}Set Limit to get only 1 collection{% endcomment %}
+  <div>
+    <h3>{{ collection.handle }}</h3>
+  </div>
+  {% for product in collection.products -%}
+    {% if product.id == 8296180744469 -%}
+      <div>Title: {{ product.title }}</div>
+      <div>ID: {{ product.id }}</div>
+      <div>Media types: {{ product.media.media_type }}</div>
+      {% for g_media in product.media -%}
+        {% case g_media.media_type %}
+          {% when 'video' %}
+            {{ g_media | media_tag: image_size: '400x' }}
+          {% when 'model' %}
+            {{ g_media | model_viewer_tag: image_size: '1200x' }}
+        {% endcase %}
+      {%- endfor %}
+    {%- endif %}
+  {%- endfor %}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
