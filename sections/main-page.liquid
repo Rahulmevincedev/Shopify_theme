@@ -37,7 +37,7 @@
       {% for g_media in product.media -%}
         {% case g_media.media_type %}
           {% when 'video' %}
-            {{ g_media | video_tag: width: '800x', autoplay: false, controls: true, loop: false, muted: false }}
+            {{ g_media | video_tag: width: '400x', autoplay: false, controls: true, loop: false, muted: false }}
           {% when 'model' %}
             <div>{{ g_media | model_viewer_tag }}</div>
         {% endcase %}
