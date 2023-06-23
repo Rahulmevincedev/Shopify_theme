@@ -24,6 +24,9 @@
 </div>
 
 <!-- Testing Liquid here -->
+{% for i in (1..10) -%}
+  {{ i }}
+{%- endfor %}
 {% for i in (1..10) limit: 6 -%}
   {{ i }}
 {%- endfor %}
