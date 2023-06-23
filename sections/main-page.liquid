@@ -39,7 +39,7 @@
           {% when 'video' %}
             {{ g_media | video_tag: width: '800x', autoplay: false, controls: true, loop: false, muted: false }}
           {% when 'model' %}
-            <div style="width: 1024px;">{{ g_media | model_viewer_tag }}</div>
+            <div>{{ g_media | model_viewer_tag }}</div>
         {% endcase %}
       {%- endfor %}
     {%- endif %}

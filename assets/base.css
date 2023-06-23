@@ -1260,8 +1260,8 @@ summary::-webkit-details-marker {
   position: absolute;
   top: 0;
   left: 0;
-  height: inherit;
-  width: inherit;
+  height: 100%;
+  width: 100%;
 }
 
 .media > img {
