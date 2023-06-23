@@ -39,7 +39,7 @@
           {% when 'video' %}
             {{ g_media | video_tag: width: '800x', autoplay: false, controls: true, loop: false, muted: false }}
           {% when 'model' %}
-            {{ g_media | model_viewer_tag: width: '1200x' }}
+            {{ g_media | model_viewer_tag: auto-rotate-delay: 50 }}
         {% endcase %}
       {%- endfor %}
     {%- endif %}
