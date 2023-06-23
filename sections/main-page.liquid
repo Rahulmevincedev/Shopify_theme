@@ -24,7 +24,7 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% assign a = 'Red,Blue,Green,Yellow,Violet,GOld' | split: ',' %}
+{% assign a = 'Red,Blue,Green,Yellow,Violet,Gold' | split: ',' %}
 {% tablerow i in a cols: 2 %}
   <div>{{ i }}</div>
 {% endtablerow %}
