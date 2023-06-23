@@ -24,9 +24,10 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% assign a = '1,2,3,4,5' | split: ',' %}
-{% for i in a reversed -%}
+{% assign a = 'Red,Blue,Green,Yellow,Violet' | split: ',' %}
+{% for i in a -%}
   {{ forloop.rindex }}
+  {% break %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
