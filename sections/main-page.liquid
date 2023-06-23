@@ -24,9 +24,12 @@
 </div>
 
 <!-- Testing Liquid here -->
-{% form 'product', all_products.chukka %}
-  <!-- This is Form -->
-{% endform %}
+{% for i in (1..10) %}
+  {% if i == 6 %}
+    {% break %}
+  {% endif %}
+  {{ i }}
+{% endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
