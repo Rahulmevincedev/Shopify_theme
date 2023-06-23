@@ -30,8 +30,10 @@
   {% for j in (4..6) -%}
     {% comment %}3rd Loop{% endcomment %}
     {%- for k in (7..9) -%}
-      {{ forloop.parentloop.parentloop.index }}-
-      {{- forloop.parentloop.index }}-{{ forloop.index }}
+      <div>
+        {{ forloop.parentloop.parentloop.index }}-
+        {{- forloop.parentloop.index }}-{{ forloop.index }}
+      </div>
     {%- endfor -%}
   {%- endfor %}
 {%- endfor %}
