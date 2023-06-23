@@ -25,11 +25,18 @@
 
 <!-- Testing Liquid here -->
 {% assign num = 4 %}
-{% unless num == 3 %}
-  NOt 3
-{% else %}
-  its 3
-{% endunless %}
+{% case num %}
+  {% when 1 %}
+    1
+  {% when 2 %}
+    2
+  {% when 3 %}
+    3
+  {% when 4 %}
+    4
+  {% else %}
+    unknown
+{% endcase %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
