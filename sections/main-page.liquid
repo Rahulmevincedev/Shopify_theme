@@ -24,10 +24,14 @@
 </div>
 
 <!-- Testing Liquid here -->
-{{ customer.first_name }}
-{% for address in customer.addresses -%}
-  {{ address.address1 }}
-{%- endfor %}
+{% assign num = 1 %}
+{% if num == 1 %}
+  1
+{% elsif num == 2 %}
+  2
+{% else %}
+  3
+{% endif %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
