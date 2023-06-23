@@ -26,9 +26,8 @@
 <!-- Testing Liquid here -->
 {% assign a = 'Red,Blue,Green,Yellow,Violet' | split: ',' %}
 {% for i in a -%}
-  {% if forloop.last %}
-    Last Element: {{ i }}
-  {% endif %}
+  {{ forloop.length }}
+  {% break %}
 {%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
