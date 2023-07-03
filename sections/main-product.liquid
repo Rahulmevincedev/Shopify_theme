@@ -253,7 +253,7 @@
                   {{ product.description }}
                   <b>Custom Meta Field</b>: {{ product.metafields.my_fields.conditions.value }}
                   {% for variant in product.variants %}
-                    <b>Custom Meta Field</b>: {{ variant.metafields.my_fields.warranty.value }}
+                    <b>Custom Product Variant Meta Field</b>: {{ variant.metafields.my_fields.warranty.value }}
                   {% endfor %}
                 </div>
               {%- endif -%}
