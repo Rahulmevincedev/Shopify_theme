@@ -34,7 +34,7 @@
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
       <div>Media types: {{ product.media.media_type }}</div>
-      <div>{{ product | image_url: width: '400x' | image_tag }}</div>
+      <div>{{ product.available }}</div>
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
