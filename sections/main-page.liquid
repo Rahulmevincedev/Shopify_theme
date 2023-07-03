@@ -36,6 +36,7 @@
       <div>
         <b>{{ product | image_url: width: '400x' | image_tag }}</b>
       </div>
+      <div>{{ product.variants }}</div>
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
