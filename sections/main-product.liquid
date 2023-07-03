@@ -256,9 +256,9 @@
                   {% for variant in product.variants %}
                     <b>Custom Product Variant Meta Field</b>: {{ variant.metafields.my_fields.warranty.value }}
                   {% endfor %}
+                  <!-- Code End Here -->
                 </div>
               {%- endif -%}
-              <!-- Code End Here -->
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
