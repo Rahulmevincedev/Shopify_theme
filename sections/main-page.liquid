@@ -35,14 +35,6 @@
       <div>ID: {{ product.id }}</div>
       <div>Media types: {{ product.media.media_type }}</div>
       <div>{{ product | image_url: width: '400x' | image_tag }}</div>
-      {% for g_media in product.media -%}
-        {% case g_media.media_type %}
-          {% when 'video' %}
-            {{ g_media | video_tag: width: '400x', autoplay: false, controls: true, loop: false, muted: false }}
-          {% when 'model' %}
-            <div>{{ g_media | model_viewer_tag }}</div>
-        {% endcase %}
-      {%- endfor %}
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
