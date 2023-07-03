@@ -37,7 +37,7 @@
         <b>{{ product | image_url: width: '400x' | image_tag }}</b>
       </div>
       {% for variant in product.variants %}
-        {{ variant.metafields.my_fields_warranty.title }}: {{ variant.metafields.my_fields.warranty }}
+        {{ variant.metafields.my_fields.warranty }}
       {% endfor %}
     {%- endif %}
   {%- endfor %}
