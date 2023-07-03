@@ -226,6 +226,12 @@
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                   {{ product.description }}
+                {% for metafield in product.metafields %}
+                  {{ metafield }}
+                {% endfor %}  
+                {% for variant in product.variants %}
+                  {{ variant }}
+                {% endfor %}  
                 </div>
               {%- endif -%}
               {%- when 'sku' -%}
