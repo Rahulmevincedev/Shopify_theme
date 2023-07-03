@@ -24,9 +24,30 @@
 </div>
 
 <!-- Testing Liquid here -->
-<select name="country">
-  {{ all_country_option_tags }}
-</select>
+{% for collection in collections limit: 1 -%}
+  {% comment %}Set Limit to get only 1 collection{% endcomment %}
+  <div>
+    <h3>{{ collection.handle }}</h3>
+  </div>
+  {% for product in collection.products -%}
+    {% if product.id == 8296180744469 -%}
+      <div>Title: {{ product.title }}</div>
+      <div>ID: {{ product.id }}</div>
+      <div><b>Properties</b></div>
+      <div><b>available</b>: {{ product.available }}</div>
+      <div><b>barcode</b>: {{ product.barcode }}</div>
+      <div><b>featured_image</b>: {{ product.featured_image }}</div>
+      <div><b>has_only_default_variant</b>: {{ product.has_only_default_variant }}</div>
+      <div><b>images</b>: {{ product.images }}</div>
+      <div><b>Custom MetaFields</b>: {{ product.metafields.my_fields.conditions }}</div>
+      <div><b>url</b>: {{ product.url }}</div>
+      <div><b>variants</b></div>
+      {% for variant in product.variants %}
+        <div>{{ variant.title }}</div>
+      {% endfor %}
+    {%- endif %}
+  {%- endfor %}
+{%- endfor %}
 <!-- End Testing(Inside this block only boiee) -->
 
 {% schema %}
