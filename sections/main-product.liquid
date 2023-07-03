@@ -251,9 +251,9 @@
               {%- if product.description != blank -%}
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                   {{ product.description }}
-                  {{ product.metafields.my_fields.conditions.value }}
+                  <b>Custom Meta Field</b>: {{ product.metafields.my_fields.conditions.value }}
                   {% for variant in product.variants %}
-                    {{ variant.metafields.my_fields.warranty.value }}
+                    <b>Custom Meta Field</b>: {{ variant.metafields.my_fields.warranty.value }}
                   {% endfor %}
                 </div>
               {%- endif -%}
