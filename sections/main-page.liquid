@@ -30,7 +30,7 @@
     <h3>{{ collection.handle }}</h3>
   </div>
   {% for product in collection.products -%}
-    {% if product.id == 8296180744469 -%}
+    {% if product.id != 8296180744469 -%}
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
       <div><b>Properties</b></div>
