@@ -62,35 +62,6 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
 
-  <!--   Liduid Code Practice 7210  -->
-  {{ page_title }}
-  {{ product.metafields.my_fields.conditions }}
-  HEllo world sdfjsjdfopijsdop
-  {% if product.metafields.test_data.snowboard_length != blank -%}
-    <br>
-    {{ product.metafields.test_data.snowboard_length }}
-    <br>
-    {{ product.metafields.test_data.snowboard_length.value.value }}
-    <br>
-    {{ product.metafields.test_data.snowboard_length.value.unit }}
-    <br>
-    {{ product.metafields.test_data.snowboard_length['value'] }}
-  {%- endif %}
-  <br>
-  {{ product.title | handle }}
-  <br>
-  {{ product.type }}
-  {% if product.type == "Shoes" -%}
-    It's Shoes
-  {%- else -%}
-    It's not Shoes sorry :(
-  {% endif %}
-  {% if product.available %}
-    Product is available ok
-  {% else %}
-    Product is not available
-  {%- endif %}
-
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
         {% render 'product-media-gallery', variant_images: variant_images %}
