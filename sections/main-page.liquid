@@ -34,7 +34,7 @@
       <div>Title: {{ product.title }}</div>
       <div>ID: {{ product.id }}</div>
       <div>Media types: {{ product.media.media_type }}</div>
-      <div>{{ product | image_url | image_tag }}</div>
+      <div>{{ product | image_url | image_tag: width: '400x' }}</div>
       {% for g_media in product.media -%}
         {% case g_media.media_type %}
           {% when 'video' %}
