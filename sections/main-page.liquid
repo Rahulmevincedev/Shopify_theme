@@ -39,6 +39,7 @@
       <div><b>featured_image</b>: {{ product.featured_image }}</div>
       <div><b>has_only_default_variant</b>: {{ product.has_only_default_variant }}</div>
       <div><b>images</b>: {{ product.images }}</div>
+      <div><b>Custom MetaFields</b>: {{ product.metafields.my_fields.conditions }}</div>
     {%- endif %}
   {%- endfor %}
 {%- endfor %}
