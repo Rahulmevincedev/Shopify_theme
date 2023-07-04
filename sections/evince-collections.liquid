@@ -1,3 +1,6 @@
+{% for product in section.settings.collections.collection.products %}
+  <div>{{ product.title }}</div>
+{% endfor %}
 {% schema %}
 {
   "name": "Show Collection",
