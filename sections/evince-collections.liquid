@@ -1,7 +1,17 @@
 {% schema %}
 {
   "name": "Show Collection",
-  "settings": [],
+  "settings": [
+    {
+      "type":"range",
+      "id":"max_show_collection_products",
+      "label":"Set Max Product",
+      "default": 4,
+      "min": 1,
+      "max": 10,
+      "step": 1
+    }
+  ],
   "presets":[
     {
       "name": "Single Collection"
