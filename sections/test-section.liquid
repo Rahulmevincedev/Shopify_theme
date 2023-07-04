@@ -1,5 +1,5 @@
 {% comment %} Render blocks {% endcomment %}
-<div>{{ section.settings.label }}</div>
+<div>{{ section.settings }}</div>
 {% for block in section.blocks %}
   {% case block.type %}
     {% when 'slide' %}
