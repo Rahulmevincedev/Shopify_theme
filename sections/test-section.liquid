@@ -1,4 +1,5 @@
 {% comment %} Render blocks {% endcomment %}
+<div>{{ section.settings }}</div>
 {% for block in section.blocks %}
   {% case block.type %}
     {% when 'slide' %}
@@ -17,7 +18,7 @@
     {
       "type": "text",
       "id": "header",
-      "label": "Header"
+      "label": "Hello World"
     }
   ],
   "blocks": [
