@@ -1,6 +1,6 @@
 {% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
   <div>
-    {{ product | image_url: width: '400x' | image_tag }}
+    {{ product | image_url: width: '200x' | image_tag }}
     {{ product.title }}
   </div>
 {% endfor %}
