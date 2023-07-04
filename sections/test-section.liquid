@@ -5,7 +5,7 @@
     {% when 'slide' %}
       {% if block.settings.image != blank %}
         <div class="slide" {{ block.shopify_attributes }}>
-          {{ block.settings.image | image_url: width: '400x' | image_tag }}
+          {{ block.settings.image | image_url: width: '200x' | image_tag }}
         </div>
       {% endif %}
   {% endcase %}
