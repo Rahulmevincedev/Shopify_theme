@@ -2,7 +2,7 @@
   <div>
     {{ product | image_url: width: '200x' | image_tag }}
     {{ product.title }}
-    {{ product.price }}
+    {{ product.price | money_with_currency }}
   </div>
 {% endfor %}
 {% schema %}
@@ -31,9 +31,3 @@
   ]
 }
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
