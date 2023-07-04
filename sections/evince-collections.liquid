@@ -1,10 +1,12 @@
-{% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
-  <div>
-    {{ product | image_url: width: '200x' | image_tag }}
-    {{ product.title }}
-    {{ product.price | money_with_currency }}
-  </div>
-{% endfor %}
+{% if section.settings.collections.products != blank %}
+  {% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
+    <div>
+      {{ product | image_url: width: '200x' | image_tag }}
+      {{ product.title }}
+      {{ product.price | money_with_currency }}
+    </div>
+  {% endfor %}
+{% endif %}
 {% schema %}
 {
   "name": "Show Collection",
