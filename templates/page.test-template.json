@@ -6,9 +6,54 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "ce04061b-69a4-4b15-b061-35ee316e0743": {
+      "type": "test-section",
+      "blocks": {
+        "e83ca870-5b21-4b47-aa14-8ad1a943aefb": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg"
+          }
+        },
+        "9934926b-bf0a-4d7f-b1fd-473081acfe4d": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg"
+          }
+        },
+        "4242d118-7c04-4ba3-8913-b0580b045896": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/snowboard_wax.png"
+          }
+        },
+        "cefc72d4-266b-444b-b58c-5090ab2dc20e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/715T2T79AsL._UY695.jpg"
+          }
+        },
+        "14d60317-65cb-4478-8dda-7c18fb305419": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "e83ca870-5b21-4b47-aa14-8ad1a943aefb",
+        "9934926b-bf0a-4d7f-b1fd-473081acfe4d",
+        "4242d118-7c04-4ba3-8913-b0580b045896",
+        "cefc72d4-266b-444b-b58c-5090ab2dc20e",
+        "14d60317-65cb-4478-8dda-7c18fb305419"
+      ],
+      "settings": {
+        "header": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "ce04061b-69a4-4b15-b061-35ee316e0743"
   ]
 }
