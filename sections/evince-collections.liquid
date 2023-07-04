@@ -1,9 +1,12 @@
 {% stylesheet %}
   .evince_title{
-    font-size: px;
+    font-size: {{ section.settings.title_font_size }}px;
   }
 {% endstylesheet %}
 {% if section.settings.collections.products != blank %}
+  {% if section.settings.collection_title != blank %}
+    <div class="evince_title">{{ section.settings.collection_title }}</div>
+  {% endif %}
   {% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
     <div>
       {{ product | image_url: width: '200x' | image_tag }}
