@@ -1,4 +1,4 @@
-{% for product in section.settings.collections.products %}
+{% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
   <div>{{ product.title }}</div>
 {% endfor %}
 {% schema %}
