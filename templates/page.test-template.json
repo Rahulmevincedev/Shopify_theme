@@ -12,8 +12,8 @@
       "settings": {
         "collection_title": "Collection Title",
         "title_font_size": "h2",
-        "collections": "hydrogen",
-        "max_show_collection_products": 4
+        "collections": "all-products",
+        "max_show_collection_products": 3
       }
     }
   },
