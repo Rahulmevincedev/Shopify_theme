@@ -36,14 +36,24 @@
       "default": "Collection Title"
     },
     {
-      "type":"range",
+      "type":"select",
       "id":"title_font_size",
       "label":"Title Font Size",
-      "default": 20,
-      "min": 10,
-      "max": 60,
-      "step": 1,
-      "unit": "px"
+      "options": [
+        {
+          "value":"h1",
+          "label":"small"
+        },
+        {
+          "value":"h2",
+          "label":"medium"
+        },
+        {
+          "value":"h3",
+          "label":"large"
+        }
+      ],
+      "default": "h2"
     },
     {
       "type": "collection",
