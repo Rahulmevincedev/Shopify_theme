@@ -17,9 +17,15 @@
   {% endif %}
   {% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
     <div>
-      {{ product | image_url: width: '200x' | image_tag }}
-      {{ product.title }}
-      {{ product.price | money_with_currency }}
+      {% if product.featured_image != blank %}
+        {{ product | image_url: width: '200x' | image_tag }}
+      {% endif %}
+      {% if product.title != blank %}
+        {{ product.title }}
+      {% endif %}
+      {% if product.price != blank %}
+        {{ product.price | money_with_currency }}
+      {% endif %}
     </div>
   {% endfor %}
 {% endif %}
