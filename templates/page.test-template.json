@@ -10,8 +10,10 @@
     "0e272cd7-fb87-4c59-a890-5678529cc6d8": {
       "type": "evince-collections",
       "settings": {
+        "collection_title": "Collection Title",
+        "title_font_size": "h2",
         "collections": "automated-collection",
-        "max_show_collection_products": 10
+        "max_show_collection_products": 4
       }
     }
   },
