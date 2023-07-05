@@ -11,9 +11,7 @@
 {% endstylesheet %}
 {% if section.settings.collections.products != blank %}
   {% if section.settings.collection_title != blank %}
-    <div
-      class=""
-    >
+    <div class="{{ section.settings.title_font_size }}">
       {{ section.settings.collection_title }}
     </div>
   {% endif %}
