@@ -10,24 +10,26 @@
   }
 {% endstylesheet %}
 {% if section.settings.collections != blank %}
-  {% if section.settings.collection_title != blank %}
-    <div class="{{ section.settings.title_font_size }}">
-      {{ section.settings.collection_title }}
-    </div>
+  {% if section.settings.collections.products != blank %}
+    {% if section.settings.collection_title != blank %}
+      <div class="{{ section.settings.title_font_size }}">
+        {{ section.settings.collection_title }}
+      </div>
+    {% endif %}
+    {% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
+      <div>
+        {% if product.featured_image != blank %}
+          {{ product | image_url: width: '200x' | image_tag }}
+        {% endif %}
+        {% if product.title != blank %}
+          {{ product.title }}
+        {% endif %}
+        {% if product.price != blank %}
+          {{ product.price | money_with_currency }}
+        {% endif %}
+      </div>
+    {% endfor %}
   {% endif %}
-  {% for product in section.settings.collections.products limit: section.settings.max_show_collection_products %}
-    <div>
-      {% if product.featured_image != blank %}
-        {{ product | image_url: width: '200x' | image_tag }}
-      {% endif %}
-      {% if product.title != blank %}
-        {{ product.title }}
-      {% endif %}
-      {% if product.price != blank %}
-        {{ product.price | money_with_currency }}
-      {% endif %}
-    </div>
-  {% endfor %}
 {% endif %}
 {% schema %}
 {
