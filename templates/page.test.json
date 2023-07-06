@@ -3,15 +3,14 @@
     "main": {
       "type": "main-test",
       "blocks": {
-        "4c8d4f66-6891-42ad-bda9-5f0e61194856": {
-          "type": "block1_richtext",
+        "cbe93ecf-b82b-411c-87ed-c92bc8a36945": {
+          "type": "block2_image",
           "settings": {
-            "block1": "asdasdasd"
           }
         }
       },
       "block_order": [
-        "4c8d4f66-6891-42ad-bda9-5f0e61194856"
+        "cbe93ecf-b82b-411c-87ed-c92bc8a36945"
       ],
       "settings": {
         "text_field": "Hello World",
