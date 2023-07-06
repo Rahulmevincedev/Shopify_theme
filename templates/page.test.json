@@ -3,6 +3,7 @@
     "main": {
       "type": "main-test",
       "settings": {
+        "text_field": "Hello World 2"
       }
     }
   },
