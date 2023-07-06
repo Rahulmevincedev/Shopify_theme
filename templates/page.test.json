@@ -5,7 +5,11 @@
       "settings": {
         "text_field": "Hello World 2",
         "text_body": "<ul><li>Hey Hey NOt bad<\/li><\/ul>"
-      }
+      },
+      "block_order": [
+        "block1_richtext",
+        "block2_image"
+      ]
     }
   },
   "order": [
