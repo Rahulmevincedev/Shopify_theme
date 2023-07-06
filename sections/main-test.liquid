@@ -2,7 +2,7 @@
 {{ section.settings.text_body }}
 {% schema %}
 {
-  "name": "Test template",
+  "name": "Test Section",
   "blocks": [
     {
       "type": "block1_richtext",
@@ -23,6 +23,16 @@
           "type": "image_picker",
           "id": "block2",
           "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Test Section",
+      "blocks": [
+        {
+          "type":"block1_richtext"
         }
       ]
     }
