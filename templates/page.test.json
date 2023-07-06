@@ -6,7 +6,7 @@
         "4c8d4f66-6891-42ad-bda9-5f0e61194856": {
           "type": "block1_richtext",
           "settings": {
-            "block1_setting1": "dadsadasd"
+            "block1": "asdasdasd"
           }
         }
       },
@@ -14,6 +14,8 @@
         "4c8d4f66-6891-42ad-bda9-5f0e61194856"
       ],
       "settings": {
+        "text_field": "Hello World",
+        "text_body": ""
       }
     }
   },
