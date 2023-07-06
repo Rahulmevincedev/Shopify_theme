@@ -2,7 +2,7 @@
 {{ section.settings.text_body }}
 {% schema %}
 {
-  "name": "Test Section",
+  "name": "Test template",
   "blocks": [
     {
       "type": "block1_richtext",
@@ -25,6 +25,19 @@
           "label": "Image"
         }
       ]
+    }
+  ],
+  "settings": [
+    {
+      "type":"text",
+      "id":"text_field",
+      "label":"Text Field",
+      "default":"Hello World"
+    },
+    {
+      "type": "richtext",
+      "id":"text_body",
+      "label": "Content"
     }
   ]
 }
