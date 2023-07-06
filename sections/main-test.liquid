@@ -3,6 +3,29 @@
 {% schema %}
 {
   "name": "Test template",
+  "blocks": [
+    {
+      "type": "block1_richtext",
+      "name": "Rich Text",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "block1",
+          "label": "Text Content"
+        }
+      ]
+    },
+    {
+      "type": "block2_image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "block2"
+        }
+      ]
+    }
+  ],
   "settings": [
     {
       "type":"text",
@@ -14,6 +37,18 @@
       "type": "richtext",
       "id":"text_body",
       "label": "Content"
+    }
+  ],
+  "defaults": [
+    {
+      "blocks": [
+        {
+          "type": "block1"
+        },
+        {
+          "type": "block2"
+        }
+      ]
     }
   ]
 }
