@@ -1,4 +1,4 @@
-<h1>{{ section.blocks.block1_richtext.settings.block1_setting1 }}</h1>
+<h1>{{ section.settings.text_field }}</h1>
 {{ section.settings.text_body }}
 {% schema %}
 {
@@ -10,7 +10,7 @@
       "settings": [
         {
           "type": "inline_richtext",
-          "id": "block1_setting1",
+          "id": "block1",
           "label": "Text Content"
         }
       ]
@@ -21,7 +21,7 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "block2_setting1",
+          "id": "block2",
           "label": "Image"
         }
       ]
