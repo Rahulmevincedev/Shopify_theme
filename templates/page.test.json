@@ -2,24 +2,6 @@
   "sections": {
     "main": {
       "type": "main-test",
-      "blocks": {
-        "770b7769-5371-4a6f-a823-20affabeb7d5": {
-          "type": "block1_richtext",
-          "settings": {
-            "block1": "fdgdfg"
-          }
-        },
-        "f7ed6b6c-772f-45a2-b518-3e32abe9204d": {
-          "type": "block2_image",
-          "settings": {
-            "block2": "shopify:\/\/shop_images\/distressed-kids-jeans.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "770b7769-5371-4a6f-a823-20affabeb7d5",
-        "f7ed6b6c-772f-45a2-b518-3e32abe9204d"
-      ],
       "settings": {
       }
     }
