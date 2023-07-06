@@ -2,6 +2,17 @@
   "sections": {
     "main": {
       "type": "main-test",
+      "blocks": {
+        "4c8d4f66-6891-42ad-bda9-5f0e61194856": {
+          "type": "block1_richtext",
+          "settings": {
+            "block1_setting1": "dadsadasd"
+          }
+        }
+      },
+      "block_order": [
+        "4c8d4f66-6891-42ad-bda9-5f0e61194856"
+      ],
       "settings": {
       }
     }
