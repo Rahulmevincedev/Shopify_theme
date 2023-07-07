@@ -3,21 +3,21 @@
     "main": {
       "type": "main-test",
       "blocks": {
-        "block1_richtext": {
+        "block1_richtextfdgfd": {
           "type": "block1_richtext",
           "settings": {
             "block1_setting1": "Enter Rich TExt"
           }
         },
-        "block2_image": {
+        "block2_imagedfg": {
           "type": "block2_image",
           "settings": {
           }
         }
       },
       "block_order": [
-        "block1_richtext",
-        "block2_image"
+        "block1_richtextfdgfd",
+        "block2_imagedfg"
       ],
       "settings": {
       }
