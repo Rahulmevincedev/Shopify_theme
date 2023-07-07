@@ -9,6 +9,12 @@
             "block1_setting1": "Enter Rich TExt"
           }
         },
+        "block1_richtext2": {
+          "type": "block1_richtext",
+          "settings": {
+            "block1_setting1": "Enter Rich TExt"
+          }
+        },
         "block2_image": {
           "type": "block2_image",
           "settings": {
@@ -17,6 +23,7 @@
       },
       "block_order": [
         "block1_richtext",
+        "block1_richtext2",
         "block2_image"
       ],
       "settings": {
