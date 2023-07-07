@@ -2,16 +2,6 @@
   "sections": {
     "main": {
       "type": "main-test",
-      "blocks": {
-        "cbe93ecf-b82b-411c-87ed-c92bc8a36945": {
-          "type": "block2_image",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "cbe93ecf-b82b-411c-87ed-c92bc8a36945"
-      ],
       "settings": {
         "text_field": "Hello World",
         "text_body": ""
