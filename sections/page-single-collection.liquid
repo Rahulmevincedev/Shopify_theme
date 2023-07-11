@@ -41,7 +41,7 @@
         <br>
         <b>Product is Variant Overload</b>
         <br>
-        {% assign main_product_handle.last = 0 %}
+        {% assign main_product_handle[0] = 'sadsd' %}
         {{ main_product_handle | join: '-' }}
       {% endif %}
     {% else %}
