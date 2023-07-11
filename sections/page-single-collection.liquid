@@ -43,7 +43,7 @@
         <b>Product is Variant Overload</b>
         <br>
         {%- capture temp_str -%}
-        {% for i in (1..main_product_handle.size) -%}
+        {%- for i in (1..main_product_handle.size) -%}
           {% unless forloop.last -%}           
             {{ main_product_handle[forloop.index0] }}            
           {%- endunless %}
