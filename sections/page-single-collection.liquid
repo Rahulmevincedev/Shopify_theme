@@ -28,9 +28,10 @@
       <br>
       <b>{{ product.handle | split: '-' | last | to_i }}</b>
       {% assign product_variant_overload_count = product.handle | split: '-' | last | to_i %}
-      <br>
-      <b>{{ product_variant_overload_count }}</b>
-      {% if product_variant_overload_count == 4 %}
+
+      {% if product_variant_overload_count == 1 %}
+        <br>
+        <b>Main Product</b>
       {% endif %}
     {% endif %}
   {%- endfor %}
