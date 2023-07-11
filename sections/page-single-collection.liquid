@@ -23,7 +23,6 @@
       {% comment %}*** Getting Main Product Handle ***{% endcomment %}
 
       {% assign main_product_handle = product.handle | split: '-' %}
-      {% assign main_product_handle .last = blank %}
 
       {% comment %}
         <br>
@@ -42,6 +41,7 @@
         <br>
         <b>Product is Variant Overload</b>
         <br>
+        {% assign main_product_handle .last = blank %}
         {{ main_product_handle | join: '-' }}
       {% endif %}
     {% else %}
