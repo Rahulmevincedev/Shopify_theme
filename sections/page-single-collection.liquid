@@ -9,78 +9,81 @@
   handle : {{ pcollection.handle }}
   <div><b>All Product Types</b></div>
   <div><b>Product</b></div>
-  {% for product in pcollection.products -%}
-    {% comment %}*** Checking Whether Product is Variant Overloaded or Not ***{% endcomment %}
+  {% paginate product by 5 %}
+    {% for product in pcollection.products -%}
+      {% comment %}*** Checking Whether Product is Variant Overloaded or Not ***{% endcomment %}
 
-    {% if product.metafields.custom.variant_overload != blank %}
-      {% comment %}
-        <b>{{ product.handle | split: '-' | join: ' ' }}</b>
-        <br>
-        <b>{{ product.handle | split: '-' | last }}</b>
-      {% endcomment %}
+      {% if product.metafields.custom.variant_overload != blank %}
+        {% comment %}
+          <b>{{ product.handle | split: '-' | join: ' ' }}</b>
+          <br>
+          <b>{{ product.handle | split: '-' | last }}</b>
+        {% endcomment %}
 
-      {% comment %}*** Getting Product count from handle ***{% endcomment %}
+        {% comment %}*** Getting Product count from handle ***{% endcomment %}
 
-      {% assign product_variant_overload_count = product.handle | split: '-' | last %}
+        {% assign product_variant_overload_count = product.handle | split: '-' | last %}
 
-      {% comment %}*** Getting Main Product Handle ***{% endcomment %}
+        {% comment %}*** Getting Main Product Handle ***{% endcomment %}
 
-      {% assign main_product_handle = product.handle | split: '-' %}
+        {% assign main_product_handle = product.handle | split: '-' %}
 
-      {% comment %}
-        <br>
-        {{ main_product_handle | join: ' ' }}
-      {% endcomment %}
+        {% comment %}
+          <br>
+          {{ main_product_handle | join: ' ' }}
+        {% endcomment %}
 
-      {% if product_variant_overload_count == '1' -%}
-        {% capture temp_str %}
+        {% if product_variant_overload_count == '1' -%}
+          {% capture temp_str %}
         {%- for i in (1..main_product_handle.size) -%}
           {% unless forloop.last -%}           
             {{ main_product_handle[forloop.index0] }}            
           {%- endunless -%}
         {%- endfor %}
         {% endcapture %}
-        {% assign main_product_handle = temp_str %}
-        {% assign temp_str = blank %}
+          {% assign main_product_handle = temp_str %}
+          {% assign temp_str = blank %}
 
+          <div>------------</div>
+          <b>title</b> : {{ product.title }}
+          <br>
+          <b>handle</b> : {{ product.handle }}
+          <br>
+          <b>type</b> : {{ product.type }}
+          <br>
+          <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
+          <br>
+          <b>Product is Variant Overload</b>
+
+          {% comment %}
+            <br>
+            {{ main_product_handle }}
+              <br>
+              {{ main_product_handle | strip | replace: ' ', '-' }}
+          {% endcomment %}
+
+          {% assign main_product_handle = main_product_handle | strip | replace: ' ', '-' %}
+          <br>
+          <b>main product url</b> : {{ main_product_handle }}
+          <b>Variant</b><br>
+          {% for variant in product.variants -%}
+            -><b>title</b> : {{ variant.title -}}
+            <br>
+          {% endfor -%}
+        {%- endif %}
+      {% else %}
         <div>------------</div>
         <b>title</b> : {{ product.title }}
         <br>
         <b>handle</b> : {{ product.handle }}
         <br>
         <b>type</b> : {{ product.type }}
-        <br>
-        <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
-        <br>
-        <b>Product is Variant Overload</b>
-
-        {% comment %}
-          <br>
-          {{ main_product_handle }}
-            <br>
-            {{ main_product_handle | strip | replace: ' ', '-' }}
-        {% endcomment %}
-
-        {% assign main_product_handle = main_product_handle | strip | replace: ' ', '-' %}
-        <br>
-        <b>main product url</b> : {{ main_product_handle }}
-        <b>Variant</b><br>
-        {% for variant in product.variants -%}
-          -><b>title</b> : {{ variant.title -}}
-          <br>
-        {% endfor -%}
-      {%- endif %}
-    {% else %}
-      <div>------------</div>
-      <b>title</b> : {{ product.title }}
-      <br>
-      <b>handle</b> : {{ product.handle }}
-      <br>
-      <b>type</b> : {{ product.type }}
-    {% endif %}
-    {% assign product_variant_overload_count = 0 %}
-    {% assign main_product_handle = '' %}
-  {%- endfor %}
+      {% endif %}
+      {% assign product_variant_overload_count = 0 %}
+      {% assign main_product_handle = '' %}
+    {%- endfor %}
+    {{- paginate | default_pagination }}
+  {% endpaginate %}
 {%- endif %}
 {% schema %}
 {
