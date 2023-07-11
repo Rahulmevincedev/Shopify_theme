@@ -71,8 +71,8 @@
             <br>
           {% endfor -%}
           <div>{{ product_variant_overload_count }}</div>
-          {% assign product_variant_overload_count = product_variant_overload_count | to_i %}
-          {% if product_variant_overload_count == 1 %}
+          {% assign product_variant_overload_count1 = product_variant_overload_count | to_i %}
+          {% if product_variant_overload_count1 == 1 %}
             Integer
           {% else %}
             String
