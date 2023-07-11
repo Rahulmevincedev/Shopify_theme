@@ -10,9 +10,11 @@
     {% comment %}*** Checking Whether Product is Variant Overloaded or Not ***{% endcomment %}
 
     {% if product.metafields.custom.variant_overload != blank %}
-      <b>{{ product.handle | split: '-' | join: ' ' }}</b>
-      <br>
-      <b>{{ product.handle | split: '-' | last }}</b>
+      {% comment %}
+        <b>{{ product.handle | split: '-' | join: ' ' }}</b>
+        <br>
+        <b>{{ product.handle | split: '-' | last }}</b>
+      {% endcomment %}
 
       {% comment %}*** Getting Product count from handle ***{% endcomment %}
 
