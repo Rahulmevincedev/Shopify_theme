@@ -1,12 +1,14 @@
+{% if section.settings.scollection != blank %}
+{% endif %}
 {% schema %}
-  {
-    "name": "Page Single Collection",
-    "settings": [
-      {
-        "type": "collection",
-        "id": "scollection",
-        "label": "Collection"
-      }
-    ]
-  }
+{
+  "name": "Page Single Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "scollection",
+      "label": "Collection"
+    }
+  ]
+}
 {% endschema %}
