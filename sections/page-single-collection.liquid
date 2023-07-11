@@ -1,11 +1,14 @@
 {% assign pcollection = section.settings.scollection %}
-{% if pcollection != blank %}
+{% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
   <div><b>Product</b></div>
-  {% for product in pcollection.products %}
-  {% endfor %}
-{% endif %}
+  {% for product in pcollection.products -%}
+    ------------
+    {{ product.handle }}
+    ------------
+  {%- endfor %}
+{%- endif %}
 {% schema %}
 {
   "name": "Page Single Collection",
