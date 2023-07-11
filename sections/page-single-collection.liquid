@@ -45,7 +45,7 @@
         {% for i in (1..main_product_handle.size) %}
           {% unless forloop.last %}
             {% assign temp_arr[forloop.index0] = main_product_handle[forloop.index0] %}
-            {{ temp_arr }}
+            {{ i }}
           {% endunless %}
         {% endfor %}
         {% assign main_product_handle = temp_arr %}
