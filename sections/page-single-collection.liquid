@@ -51,6 +51,8 @@
         {%- endcapture -%}
         {% assign main_product_handle = temp_str %}
         {% assign temp_str = blank %}
+        {{ main_product_handle | replace: ' ', '-' -}}
+        <br>
         {{ main_product_handle | replace: ' ', '-' }}
       {%- endif %}
     {% else %}
@@ -62,8 +64,6 @@
       <b>type</b> : {{ product.type }}
     {% endif %}
     {% assign product_variant_overload_count = 0 %}
-    {% assign main_product_handle = '' -%}
-    <br>
     {% assign main_product_handle = '' %}
   {%- endfor %}
 {%- endif %}
