@@ -2,6 +2,8 @@
 {% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
+  <div><b>All Product Types</b></div>
+  {{ pcollection.all_types }}
   {% comment %}
     <div><b>Product</b></div>
     {% for product in pcollection.products -%}
