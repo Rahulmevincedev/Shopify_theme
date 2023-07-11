@@ -15,6 +15,8 @@
     <br>
     <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
     {% if product.metafields.custom.variant_overload != blank %}
+      <br>
+      <b>Product is Variant Overload</b>
     {% endif %}
   {%- endfor %}
 {%- endif %}
