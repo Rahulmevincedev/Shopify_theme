@@ -51,12 +51,12 @@
         <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
         <br>
         <b>Product is Variant Overload</b>
-        <br>
-        {{ main_product_handle }}
 
         {% comment %}
           <br>
-          {{ main_product_handle | strip | replace: ' ', '-' }}
+          {{ main_product_handle }}
+            <br>
+            {{ main_product_handle | strip | replace: ' ', '-' }}
         {% endcomment %}
 
         {% assign main_product_handle = main_product_handle | strip | replace: ' ', '-' %}
