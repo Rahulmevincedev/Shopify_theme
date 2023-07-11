@@ -24,8 +24,11 @@
 
       {% assign main_product_handle = product.handle | split: '-' %}
       {% assign main_product_handle .last = blank %}
-      <br>
-      {{ main_product_handle | join: ' ' }}
+
+      {% comment %}
+        <br>
+        {{ main_product_handle | join: ' ' }}
+      {% endcomment %}
 
       {% if product_variant_overload_count == '1' %}
         <div>------------</div>
