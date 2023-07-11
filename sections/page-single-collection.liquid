@@ -46,7 +46,7 @@
           {% unless forloop.last %}
             {% capture temp_str %}
             {{ main_product_handle[forloop.index0] }}
-             {% endcapture %}
+            {% endcapture %}
           {% endunless %}
         {% endfor %}
         {% assign main_product_handle = temp_arr %}
