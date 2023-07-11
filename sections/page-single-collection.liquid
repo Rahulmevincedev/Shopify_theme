@@ -30,7 +30,7 @@
         {{ main_product_handle | join: ' ' }}
       {% endcomment %}
 
-      {% if product_variant_overload_count == '1' %}
+      {% if product_variant_overload_count == '1' -%}
         <div>------------</div>
         <b>title</b> : {{ product.title }}
         <br>
@@ -52,7 +52,7 @@
         {% assign main_product_handle = temp_str %}
         {% assign temp_str = blank %}
         {{ main_product_handle | replace: ' ', '-' }}
-      {% endif %}
+      {%- endif %}
     {% else %}
       <div>------------</div>
       <b>title</b> : {{ product.title }}
