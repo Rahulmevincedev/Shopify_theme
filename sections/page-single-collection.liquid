@@ -41,6 +41,8 @@
         <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
         <br>
         <b>Product is Variant Overload</b>
+        <br>
+        {{ main_product_handle | join: '-' }}
       {% endif %}
     {% else %}
       <div>------------</div>
