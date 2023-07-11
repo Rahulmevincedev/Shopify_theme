@@ -43,10 +43,10 @@
         <b>Product is Variant Overload</b>
         <br>
         {% for i in (1..main_product_handle.size) %}
-          {% if forloop.last != true %}
+          {% unless forloop.last %}
             {% assign temp_arr[forloop.index0] = main_product_handle[forloop.index0] %}
             {{ temp_arr }}
-          {% endif %}
+          {% endunless %}
         {% endfor %}
         {% assign main_product_handle = temp_arr %}
         {% assign temp_arr = blank %}
