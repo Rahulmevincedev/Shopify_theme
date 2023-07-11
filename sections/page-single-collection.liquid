@@ -71,6 +71,11 @@
             <br>
           {% endfor -%}
           {% assign product_variant_overload_count = product_variant_overload_count | to_i %}
+          {% if product_variant_overload_count == 1 %}
+            Integer
+          {% else %}
+            String
+          {% endif %}
 
           {% comment %}*** Get other variant of main product  ***{% endcomment %}
         {%- endif %}
