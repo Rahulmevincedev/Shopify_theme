@@ -51,7 +51,7 @@
         {% endfor %}
         {% assign main_product_handle = temp_str %}
         {% assign temp_str = blank %}
-        {{ main_product_handle | join: '-' }}
+        {{ main_product_handle | replace: ' ', '-' }}
       {% endif %}
     {% else %}
       <div>------------</div>
