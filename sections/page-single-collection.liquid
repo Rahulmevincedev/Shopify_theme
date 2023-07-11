@@ -42,13 +42,13 @@
         <br>
         <b>Product is Variant Overload</b>
         <br>
-        {% capture temp_str %}
-        {% for i in (1..main_product_handle.size) %}
-          {% unless forloop.last %}           
+        {% capture temp_str -%}
+        {% for i in (1..main_product_handle.size) -%}
+          {% unless forloop.last -%}           
             {{ main_product_handle[forloop.index0] }}            
-          {% endunless %}
-        {% endfor %}
-        {% endcapture %}
+          {%- endunless %}
+        {%- endfor %}
+        {%- endcapture %}
         {% assign main_product_handle = temp_str %}
         {% assign temp_str = blank %}
         {{ main_product_handle | replace: ' ', '-' }}
