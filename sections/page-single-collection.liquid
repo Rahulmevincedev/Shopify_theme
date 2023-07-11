@@ -1,4 +1,5 @@
 {% assign pcollection = section.settings.scollection %}
+{% assign pall_types = pcollection.all_types %}
 {% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
