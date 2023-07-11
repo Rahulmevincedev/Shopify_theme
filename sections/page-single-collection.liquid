@@ -6,18 +6,17 @@
   <div><b>All Product Types</b></div>
   <div><b>Product</b></div>
   {% for product in pcollection.products -%}
-    <div>------------</div>
-    <b>title</b> : {{ product.title }}
-    <br>
-    <b>handle</b> : {{ product.handle }}
-    <br>
-    <b>type</b> : {{ product.type }}
-    <br>
-    <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
-
     {% comment %}*** Checking Whether Product is Variant Overloaded or Not ***{% endcomment %}
 
     {% if product.metafields.custom.variant_overload != blank %}
+      <div>------------</div>
+      <b>title</b> : {{ product.title }}
+      <br>
+      <b>handle</b> : {{ product.handle }}
+      <br>
+      <b>type</b> : {{ product.type }}
+      <br>
+      <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
       <br>
       <b>Product is Variant Overload</b>
       <br>
@@ -33,6 +32,15 @@
         <br>
         <b>Main Product</b>
       {% endif %}
+    {% else %}
+      <div>------------</div>
+      <b>title</b> : {{ product.title }}
+      <br>
+      <b>handle</b> : {{ product.handle }}
+      <br>
+      <b>type</b> : {{ product.type }}
+      <br>
+      <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
     {% endif %}
   {%- endfor %}
 {%- endif %}
