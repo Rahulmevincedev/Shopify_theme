@@ -14,10 +14,16 @@
     <b>type</b> : {{ product.type }}
     <br>
     <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
+
+    {% comment %}***Checking Whether Product is Variant Overloaded or Not***{% endcomment %}
+
     {% if product.metafields.custom.variant_overload != blank %}
       <br>
       <b>Product is Variant Overload</b>
       <br>
+
+      {% comment %}***Checking Whether Product is Variant Overloaded or Not***{% endcomment %}
+
       <b>{{ product.handle | split: '-' | join: ' ' }}</b>
       <br>
       <b>{{ product.handle | split: '-' | last | to_i }}</b>
