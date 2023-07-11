@@ -70,6 +70,7 @@
             -><b>title</b> : {{ variant.title -}}
             <br>
           {% endfor -%}
+          {% assign product_variant_overload_count = product_variant_overload_count | to_i %}
 
           {% comment %}*** Get other variant of main product  ***{% endcomment %}
         {%- endif %}
