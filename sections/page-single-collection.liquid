@@ -51,7 +51,7 @@
         {% endfor %}
         {% assign main_product_handle = temp_arr %}
         {% assign temp_arr = blank %}
-        {{ main_product_handle }}
+        {{ main_product_handle | join: '-' }}
       {% endif %}
     {% else %}
       <div>------------</div>
