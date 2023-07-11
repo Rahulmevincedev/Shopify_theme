@@ -18,7 +18,7 @@
       <br>
       <b>Product is Variant Overload</b>
       <br>
-      <b>{{ product.handle | split: '-' }}</b>
+      <b>{{ product.handle | split: '-' | join: ' ' }}</b>
     {% endif %}
   {%- endfor %}
 {%- endif %}
