@@ -9,18 +9,6 @@
     {% comment %}*** Checking Whether Product is Variant Overloaded or Not ***{% endcomment %}
 
     {% if product.metafields.custom.variant_overload != blank %}
-      <div>------------</div>
-      <b>title</b> : {{ product.title }}
-      <br>
-      <b>handle</b> : {{ product.handle }}
-      <br>
-      <b>type</b> : {{ product.type }}
-      <br>
-      <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
-      <br>
-      <b>Product is Variant Overload</b>
-      <br>
-
       {% comment %}*** Getting Product count from handle ***{% endcomment %}
 
       <b>{{ product.handle | split: '-' | join: ' ' }}</b>
@@ -29,6 +17,17 @@
       {% assign product_variant_overload_count = product.handle | split: '-' | last | to_i %}
 
       {% if product_variant_overload_count == '1' %}
+        <div>------------</div>
+        <b>title</b> : {{ product.title }}
+        <br>
+        <b>handle</b> : {{ product.handle }}
+        <br>
+        <b>type</b> : {{ product.type }}
+        <br>
+        <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
+        <br>
+        <b>Product is Variant Overload</b>
+        <br>
         <br>
         <b>Main Product</b>
       {% endif %}
@@ -39,8 +38,6 @@
       <b>handle</b> : {{ product.handle }}
       <br>
       <b>type</b> : {{ product.type }}
-      <br>
-      <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
     {% endif %}
   {%- endfor %}
 {%- endif %}
