@@ -1,7 +1,7 @@
 {% assign pcollection = section.settings.scollection %}
 {% assign product_variant_overload_count = 0 %}
 {% assign main_product_handle = '' %}
-{% assign temp_arr = blank %}
+{% assign temp_str = blank %}
 {% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
@@ -44,8 +44,9 @@
         <br>
         {% for i in (1..main_product_handle.size) %}
           {% unless forloop.last %}
-            {% assign temp_arr[forloop.index0] = main_product_handle[forloop.index0] %}
+            {% capture temp_str %}
             {{ main_product_handle[forloop.index0] }}
+             {% endcapture %}
           {% endunless %}
         {% endfor %}
         {% assign main_product_handle = temp_arr %}
