@@ -3,6 +3,8 @@
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
   <div><b>Product</b></div>
+  {% for product in pcollection.products %}
+  {% endfor %}
 {% endif %}
 {% schema %}
 {
