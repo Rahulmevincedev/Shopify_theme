@@ -42,7 +42,8 @@
         <br>
         <b>Product is Variant Overload</b>
         <br>
-        {% assign main_product_handle.last = 'sadsd' %}
+        {% for i in (1..main_product_handle.size) %}
+        {% endfor %}
         {{ main_product_handle.last }}
         {{ main_product_handle | join: '-' }}
       {% endif %}
