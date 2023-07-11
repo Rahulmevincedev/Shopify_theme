@@ -18,6 +18,13 @@
 
       {% assign product_variant_overload_count = product.handle | split: '-' | last %}
 
+      {% comment %}*** Getting Main Product Handle ***{% endcomment %}
+
+      {% assign main_product_handle = product.handle | split: '-' %}
+      {% assign main_product_handle .last = blank %}
+      <br>
+      {{ main_product_handle | join: ' ' }}
+
       {% if product_variant_overload_count == '1' %}
         <div>------------</div>
         <b>title</b> : {{ product.title }}
