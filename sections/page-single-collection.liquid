@@ -64,6 +64,9 @@
         {% assign main_product_handle = main_product_handle | strip | replace: ' ', '-' %}
         <br>
         <b>main product url</b> : {{ main_product_handle }}
+        <b>Variant</b><br>
+        {% for variant in product.variants %}
+        {% endfor %}
       {%- endif %}
     {% else %}
       <div>------------</div>
