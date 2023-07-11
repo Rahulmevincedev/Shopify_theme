@@ -4,18 +4,15 @@
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
   <div><b>All Product Types</b></div>
-  <div>{{ pcollection.all_types }}</div>
-  {% comment %}
-    <div><b>Product</b></div>
-    {% for product in pcollection.products -%}
-      <div>------------</div>
-      <b>title</b> : {{ product.title }}
-      <br>
-      <b>handle</b> : {{ product.handle }}
-      <br>
-      <b>type</b> : {{ product.type }}
-    {%- endfor %}
-  {% endcomment %}
+  <div><b>Product</b></div>
+  {% for product in pcollection.products -%}
+    <div>------------</div>
+    <b>title</b> : {{ product.title }}
+    <br>
+    <b>handle</b> : {{ product.handle }}
+    <br>
+    <b>type</b> : {{ product.type }}
+  {%- endfor %}
 {%- endif %}
 {% schema %}
 {
