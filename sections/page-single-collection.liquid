@@ -1,4 +1,6 @@
-{% if section.settings.scollection != blank %}
+{% assign pcollection = section.settings.scollection %}
+{% if pcollection != blank %}
+  {{ pcollection }}
 {% endif %}
 {% schema %}
 {
