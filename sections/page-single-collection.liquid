@@ -27,7 +27,7 @@
       <b>{{ product.handle | split: '-' | join: ' ' }}</b>
       <br>
       <b>{{ product.handle | split: '-' | last }}</b>
-      {% assign product_variant_overload_count = product.handle | split: '-' %}
+      {% assign product_variant_overload_count = product.handle | split: '-' | last %}
 
       {% if product_variant_overload_count == '1' %}
         <br>
