@@ -3,6 +3,7 @@
     "main": {
       "type": "page-single-collection",
       "settings": {
+        "scollection": "all-products"
       }
     }
   },
