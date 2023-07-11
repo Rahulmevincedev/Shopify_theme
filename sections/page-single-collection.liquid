@@ -14,6 +14,8 @@
     <b>type</b> : {{ product.type }}
     <br>
     <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
+    {% if product.metafields.custom.variant_overload != blank %}
+    {% endif %}
   {%- endfor %}
 {%- endif %}
 {% schema %}
