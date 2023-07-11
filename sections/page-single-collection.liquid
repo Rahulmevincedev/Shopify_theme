@@ -2,15 +2,17 @@
 {% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
-  <div><b>Product</b></div>
-  {% for product in pcollection.products -%}
-    <div>------------</div>
-    <b>title</b> : {{ product.title }}
-    <br>
-    <b>handle</b> : {{ product.handle }}
-    <br>
-    <b>type</b> : {{ product.type }}
-  {%- endfor %}
+  {% comment %}
+    <div><b>Product</b></div>
+    {% for product in pcollection.products -%}
+      <div>------------</div>
+      <b>title</b> : {{ product.title }}
+      <br>
+      <b>handle</b> : {{ product.handle }}
+      <br>
+      <b>type</b> : {{ product.type }}
+    {%- endfor %}
+  {% endcomment %}
 {%- endif %}
 {% schema %}
 {
