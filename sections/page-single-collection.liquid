@@ -4,9 +4,9 @@
   handle : {{ pcollection.handle }}
   <div><b>Product</b></div>
   {% for product in pcollection.products -%}
-    ------------
+    <div>------------</div>
     {{ product.handle }}
-    ------------
+    <div>------------</div>
   {%- endfor %}
 {%- endif %}
 {% schema %}
