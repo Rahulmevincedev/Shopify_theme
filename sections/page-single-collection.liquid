@@ -1,5 +1,5 @@
 {% assign pcollection = section.settings.scollection %}
-{% assign pall_types = pcollection.all_types %}
+{% assign product_variant_overload_count = 0 %}
 {% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
@@ -27,6 +27,11 @@
       <b>{{ product.handle | split: '-' | join: ' ' }}</b>
       <br>
       <b>{{ product.handle | split: '-' | last | to_i }}</b>
+      {% assign product_variant_overload_count = product.handle | split: '-' | last | to_i %}
+      <br>
+      <b>{{ product_variant_overload_count }}</b>
+      {% if product_variant_overload_count == 4 %}
+      {% endif %}
     {% endif %}
   {%- endfor %}
 {%- endif %}
