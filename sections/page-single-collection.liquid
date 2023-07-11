@@ -17,6 +17,8 @@
     {% if product.metafields.custom.variant_overload != blank %}
       <br>
       <b>Product is Variant Overload</b>
+      <br>
+      <b>{{ product.handle | split: '-' }}</b>
     {% endif %}
   {%- endfor %}
 {%- endif %}
