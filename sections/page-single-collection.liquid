@@ -49,8 +49,8 @@
             {% endcapture %}
           {% endunless %}
         {% endfor %}
-        {% assign main_product_handle = temp_arr %}
-        {% assign temp_arr = blank %}
+        {% assign main_product_handle = temp_str %}
+        {% assign temp_str = blank %}
         {{ main_product_handle | join: '-' }}
       {% endif %}
     {% else %}
