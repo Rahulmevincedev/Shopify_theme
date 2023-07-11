@@ -2,6 +2,8 @@
 {% assign product_variant_overload_count = 0 %}
 {% assign main_product_handle = '' %}
 {% assign temp_str = blank %}
+{% assign temp_variant = blank %}
+
 {% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
   handle : {{ pcollection.handle }}
