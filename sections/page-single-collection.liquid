@@ -65,8 +65,9 @@
         <br>
         <b>main product url</b> : {{ main_product_handle }}
         <b>Variant</b><br>
-        {% for variant in product.variants %}
-        {% endfor %}
+        {% for variant in product.variants -%}
+          -><b>title</b> : {{ variant.title }}
+        {% endfor -%}
       {%- endif %}
     {% else %}
       <div>------------</div>
