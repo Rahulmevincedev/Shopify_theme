@@ -51,7 +51,7 @@
         {%- endcapture -%}
         {% assign main_product_handle = temp_str %}
         {% assign temp_str = blank %}
-        {{ main_product_handle | replace: ' ', '-' -}}
+        {{ main_product_handle }}
         <br>
         {{ main_product_handle | replace: ' ', '-' }}
       {%- endif %}
