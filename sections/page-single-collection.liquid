@@ -47,6 +47,7 @@
             {% break %}
           {% else %}
             {% assign temp_arr[forloop.index0] = main_product_handle[forloop.index0] %}
+            {{ temp_arr }}
           {% endif %}
         {% endfor %}
         {% assign main_product_handle = temp_arr %}
