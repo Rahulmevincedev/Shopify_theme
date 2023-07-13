@@ -70,13 +70,12 @@
             {{ variant.title -}}
             <br>
           {% endfor -%}
-          {% assign product_variant_overload_count = 1 %}
 
           {% comment %}*** Get other variant of main product  ***{% endcomment %}
 
-          {% increment product_variant_overload_count %}
+          {% increment temp_count %}
           {% capture sub_product_handle -%}
-            {{- main_product_handle }}-{{ product_variant_overload_count -}}
+            {{- main_product_handle }}-{%  increment temp_count %}
           {%- endcapture %}
           {{ sub_product_handle }}
         {%- endif %}
