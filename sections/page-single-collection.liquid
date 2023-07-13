@@ -78,7 +78,7 @@
             {% capture sub_product_handle -%}
               {{- main_product_handle }}-{{ i -}}
             {%- endcapture %}
-            {{ sub_product_handle }}
+            {{ sub_product_handle | strip }}
             <br>
             {{ all_products.sub_product_handle.title }}
           {% endfor %}
