@@ -76,7 +76,7 @@
 
           {% for i in (temp_count..product.metafields.custom.variant_overload) %}
             {% capture sub_product_handle -%}
-            {{- main_product_handle }}-{{ i -}}
+              {{- main_product_handle }}-{{ i -}}
             {%- endcapture %}
             {{ sub_product_handle }}
             <br>
