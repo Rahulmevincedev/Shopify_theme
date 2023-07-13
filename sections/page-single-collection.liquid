@@ -46,6 +46,10 @@
             {% assign temp_str = blank %}
 
             <div>------------</div>
+            {% if product.type != blank %}
+              <br>
+              <b>type</b> : {{ product.type }}
+            {% endif %}
             <b>title</b> : {{ product.title }}
             <br>
             <b>handle</b> : {{ product.handle }}
