@@ -74,6 +74,7 @@
           {% comment %}*** Get other variant of main product  ***{% endcomment %}
 
           {% increment temp_count %}
+          {% increment temp_count %}
           {% capture sub_product_handle -%}
             {{- main_product_handle }}-{%  increment temp_count %}
           {%- endcapture %}
