@@ -78,7 +78,7 @@
             {% capture sub_product_handle -%}
               {{- main_product_handle }}-{{ i -}}
             {%- endcapture -%}
-            {{ sub_product_handle | strip }}
+            <b>{{ sub_product_handle | strip }}</b>
             <br>
             {% for variant in all_products[sub_product_handle].variants -%}
               {{ variant.title -}}
