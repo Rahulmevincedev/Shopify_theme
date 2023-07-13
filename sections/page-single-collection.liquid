@@ -79,7 +79,8 @@
           {%- endcapture %}
           {{ sub_product_handle }}
           {% for i in (temp_count..product.metafields.custom.variant_overload) %}
-            {{ all_products.sub_product_handle }}
+            <br>
+            {{ all_products.sub_product_handle.title }}
           {% endfor %}
         {%- endif %}
       {% else %}
