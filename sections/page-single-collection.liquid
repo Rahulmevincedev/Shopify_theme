@@ -2,7 +2,6 @@
 {% assign product_variant_overload_count = 0 %}
 {% assign main_product_handle = '' %}
 {% assign temp_str = blank %}
-{% assign temp_count = 2 %}
 
 {% if pcollection != blank -%}
   <div><b>Collection Object</b></div>
@@ -79,7 +78,7 @@
 
             {% comment %}*** Get other variant of main product  ***{% endcomment %}
 
-            {% for i in (temp_count..product.metafields.custom.variant_overload) %}
+            {% for i in (2..product.metafields.custom.variant_overload) %}
               {% capture sub_product_handle -%}
               {{- main_product_handle }}-{{ i -}}
             {%- endcapture -%}
