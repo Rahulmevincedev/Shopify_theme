@@ -79,7 +79,7 @@
           {%- endcapture %}
           {{ sub_product_handle }}
           {% for i in (temp_count..product.metafields.custom.variant_overload) %}
-            {{ pcollection.products.sub_product_handle }}
+            {{ i }}
           {% endfor %}
         {%- endif %}
       {% else %}
