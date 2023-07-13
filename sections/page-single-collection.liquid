@@ -80,7 +80,7 @@
             {%- endcapture -%}
             {{ sub_product_handle | strip }}
             <br>
-            {{ all_products.sub_product_handle.title }}
+            {{ all_products[sub_product_handle].title }}
           {% endfor %}
         {%- endif %}
       {% else %}
