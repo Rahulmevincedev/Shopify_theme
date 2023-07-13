@@ -9,7 +9,7 @@
   handle : {{ pcollection.handle }}
   <div><b>All Product Types</b></div>
   <div><b>Product</b></div>
-  {% if product != blank %}
+  {% if pcollection.products != blank %}
     {% paginate pcollection.products by 5 %}
       {% for product in pcollection.products -%}
         {% comment %}*** Checking Whether Product is Variant Overloaded or Not ***{% endcomment %}
