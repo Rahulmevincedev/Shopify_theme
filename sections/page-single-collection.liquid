@@ -80,9 +80,9 @@
 
           {% comment %}*** Get other variant of main product  ***{% endcomment %}
 
-          {% capture sub_product_handle %}
-            {{ main_product_handle }}-{{ product_variant_overload_count }}
-          {% endcapture %}
+          {% capture sub_product_handle -%}
+            {{- main_product_handle }}-{{ product_variant_overload_count -}}
+          {%- endcapture %}
           {{ sub_product_handle }}
         {%- endif %}
       {% else %}
