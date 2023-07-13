@@ -45,6 +45,9 @@
             {% assign temp_str = blank %}
 
             <div>------------</div>
+            {% if product.images != empty %}
+              {{ product | image_url: width: '200x' | image_tag }}
+            {% endif %}
             {% if product.title != blank %}
               <b>title</b> : {{ product.title }}
             {% endif %}
