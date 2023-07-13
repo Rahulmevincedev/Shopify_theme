@@ -49,8 +49,10 @@
             <b>title</b> : {{ product.title }}
             <br>
             <b>handle</b> : {{ product.handle }}
-            <br>
-            <b>type</b> : {{ product.type }}
+            {% if product.type != blank %}
+              <br>
+              <b>type</b> : {{ product.type }}
+            {% endif %}
             <br>
             <b>variant overload</b> : {{ product.metafields.custom.variant_overload }}
             <br>
