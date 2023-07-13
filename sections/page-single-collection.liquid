@@ -46,6 +46,7 @@
 
             <div>------------</div>
             {% if product.images != empty %}
+              <br>
               {{ product | image_url: width: '200x' | image_tag }}
             {% endif %}
             {% if product.title != blank %}
