@@ -74,11 +74,11 @@
 
           {% comment %}*** Get other variant of main product  ***{% endcomment %}
 
-          {% capture sub_product_handle -%}
+          {% for i in (temp_count..product.metafields.custom.variant_overload) %}
+            {% capture sub_product_handle -%}
             {{- main_product_handle }}-{{  temp_count | plus: 1 -}}
           {%- endcapture %}
-          {{ sub_product_handle }}
-          {% for i in (temp_count..product.metafields.custom.variant_overload) %}
+            {{ sub_product_handle }}
             <br>
             {{ all_products.sub_product_handle.title }}
           {% endfor %}
