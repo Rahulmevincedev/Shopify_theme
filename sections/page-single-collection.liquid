@@ -88,8 +88,8 @@
         {%- endif %}
       {% else %}
         <div>------------</div>
-        {% if product.featured_image %}
-          {{ product.featured_image | image_url: width: '200x' | image_tag }}
+        {% if product.images != blank %}
+          {{ product | image_url: width: '200x' | image_tag }}
         {% endif %}
         <br>
         <b>title</b> : {{ product.title }}
