@@ -33,6 +33,7 @@
             {{ main_product_handle | join: ' ' }}
           {% endcomment %}
 
+          {{ product_variant_overload_count }}
           {% if product_variant_overload_count == '1' -%}
             {% capture temp_str %}
         {%- for i in (1..main_product_handle.size) -%}
