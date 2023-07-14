@@ -1,6 +1,19 @@
 {% schema %}
 {
   "name": "Test Section 2",
-  "settings": []
+  "settings": [
+    {
+      "type" : "text",
+      "id" : "sec-set1",
+      "label" : "Section Setting1 Label",
+      "default" : "Section Setting1 Default Value"
+    },
+{
+      "type" : "checkbox",
+      "id" : "sec-set2",
+      "label" : "Section Setting2 Label",
+      "default" : true
+    }
+  ]
 }
 {% endschema %}
