@@ -3293,7 +3293,20 @@
       }
     },
     "test-section3-richtext": {
-      "name": "Evince Rich Text"
+      "name": "Evince Rich Text",
+      "settings": {
+        "set1-desktop-content-position": {
+          "option-1": {
+            "label": "Left"
+          },
+          "option-2": {
+            "label": "Center"
+          },
+          "option-3": {
+            "label": "Right"
+          }
+        }
+      }
     }
   }
 }
