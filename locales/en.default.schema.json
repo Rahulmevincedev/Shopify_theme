@@ -3305,6 +3305,17 @@
           "option-3": {
             "label": "Right"
           }
+        },
+        "set2-content-alignment": {
+          "option-1": {
+            "label": "Left"
+          },
+          "option-2": {
+            "label": "Center"
+          },
+          "option-3": {
+            "label": "Right"
+          }
         }
       }
     }
