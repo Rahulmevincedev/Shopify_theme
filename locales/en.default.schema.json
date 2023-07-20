@@ -3321,7 +3321,19 @@
           }
         },
         "set3-color-scheme": {
-          "label": "Color Scheme"
+          "label": "Color Scheme",
+          "option-1": {
+            "label": "Left"
+          },
+          "option-2": {
+            "label": "Center"
+          },
+          "option-3": {
+            "label": "Right"
+          },
+          "option-4": {
+            "label": "Right"
+          }
         }
       }
     }
