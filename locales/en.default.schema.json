@@ -3319,6 +3319,9 @@
           "option-3": {
             "label": "Right"
           }
+        },
+        "set3-color-scheme": {
+          "label": "Color Scheme"
         }
       }
     }
