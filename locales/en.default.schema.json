@@ -3297,6 +3297,7 @@
       "settings": {
         "set1-desktop-content-position": {
           "label": "Desktop content position",
+          "info": "Position is automatically optimized for mobile.",
           "option-1": {
             "label": "Left"
           },
