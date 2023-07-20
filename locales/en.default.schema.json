@@ -3323,16 +3323,16 @@
         "set3-color-scheme": {
           "label": "Color Scheme",
           "option-1": {
-            "label": "Left"
+            "label": "Accent 1"
           },
           "option-2": {
-            "label": "Center"
+            "label": "Accent 2"
           },
           "option-3": {
-            "label": "Right"
+            "label": "Background 1"
           },
           "option-4": {
-            "label": "Right"
+            "label": "Background 2"
           }
         }
       }
