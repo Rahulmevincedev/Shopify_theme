@@ -47,10 +47,17 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "822b469e-2223-417f-8fbe-6bd136535eae": {
+      "type": "test-section3-richtext",
+      "settings": {
+        "set1-dcp": "center"
+      }
     }
   },
   "order": [
     "main",
-    "91f3f9fa-9ca5-43c9-943a-e9984a89cb64"
+    "91f3f9fa-9ca5-43c9-943a-e9984a89cb64",
+    "822b469e-2223-417f-8fbe-6bd136535eae"
   ]
 }
