@@ -3337,6 +3337,9 @@
           "option-5": {
             "label": "inverse"
           }
+        },
+        "set4-section-full-width": {
+          "label": "Make section full width"
         }
       }
     }
