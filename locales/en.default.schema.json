@@ -3291,6 +3291,9 @@
       "presets": {
         "name": "Collapsible content"
       }
+    },
+    "test-section3-richtext": {
+      "name": "Evince Rich Text"
     }
   }
 }
