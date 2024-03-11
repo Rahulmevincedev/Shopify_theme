@@ -1,0 +1,44 @@
+<h1>{{ collections['automated-collection'].title }}</h1>
+{% assign desktopProductPerRow = 3 %}
+{% assign mobileProductPerRow = 2 %}
+
+{% assign desktopViewImageRowPosition = 3 %}
+{% assign desktopViewImageRowIsset = false %}
+
+{% assign mobileViewImageRowPosition = 2 %}
+{% assign mobileViewImageRowIsset = false %}
+
+{% assign dProductRow = 1 %}
+{% assign mProductRow = 1 %}
+
+{% for product in collections['automated-collection'].products %}
+  {% comment %}Show Banner at specified row in desktop view{% endcomment %}
+  {% assign desktopViewImageRowPosition = desktopViewImageRowPosition | plus: 1 %}
+  {% if desktopViewImageRowIsset == false and desktopViewImageRowPosition == dProductRow %}
+    {{ 'Desktop Image Banner' }}
+    {% assign desktopViewImageRowIsset = true %}
+  {% endif %}
+  {% assign desktopViewImageRowPosition = desktopViewImageRowPosition | minus: 1 %}
+
+  {% comment %}Show Banner at specified row in mobile view{% endcomment %}
+  {% assign mobileViewImageRowPosition = mobileViewImageRowPosition | plus: 1 %}
+  {% if mobileViewImageRowIsset == false and mobileViewImageRowPosition == mProductRow %}
+    {{ 'Mobile Image Banner' }}
+    {% assign mobileViewImageRowIsset = true %}
+  {% endif %}
+  {% assign mobileViewImageRowPosition = mobileViewImageRowPosition | minus: 1 %}
+
+  {{ product.title -}}
+  <br>
+
+  {% comment %}Desktop productRow increament{% endcomment %}
+  {% assign modulusValue = forloop.index | modulo: desktopProductPerRow %}
+  {% if modulusValue == 0 %}
+    {% assign dProductRow = dProductRow | plus: 1 %}
+  {% endif %}
+  {% comment %}Mobile productRow increament{% endcomment %}
+  {% assign modulusValue = forloop.index | modulo: mobileProductPerRow %}
+  {% if modulusValue == 0 %}
+    {% assign mProductRow = mProductRow | plus: 1 %}
+  {% endif %}
+{% endfor %}
